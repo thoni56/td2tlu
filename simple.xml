@@ -1,16 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <timeduty>
-<meta version='1.8.1' date='2019-11-12 07:54:15' />
-<settings>
-    <setting name='ReportName' value='Time report - Detailed' />
-    <setting name='CompanyName' value='Responsive' />
-    <setting name='Currency' value='SEK' />
-    <setting name='FilterDateFrom' value='2019-10-01 00:00:00' />
-    <setting name='FilterDateTo' value='2019-11-01 00:00:00' />
-    <setting name='FilterProject' value='Alla projekt' />
-    <setting name='FilterUserName' value='Alla användare' />
-    <setting name='FilterClient' value='Alla klienter' />
-    <setting name='FilterUserGroup' value='Alla resultatenheter' />
-    <setting name='FilterTypeOfTime' value='Alla typer av tid' />
-    <setting name='FilterApprovalStatus' value='Alla' />
-</settings>
+    <meta version='1.8.1' date='2019-11-12 07:54:15' />
+    <settings>
+        <setting name='ReportName' value='Time report - Detailed' />
+        <setting name='CompanyName' value='Responsive' />
+        <setting name='Currency' value='SEK' />
+        <setting name='FilterDateFrom' value='2019-10-01 00:00:00' />
+        <setting name='FilterDateTo' value='2019-11-01 00:00:00' />
+        <setting name='FilterProject' value='Alla projekt' />
+        <setting name='FilterUserName' value='Alla användare' />
+        <setting name='FilterClient' value='Alla klienter' />
+        <setting name='FilterUserGroup' value='Alla resultatenheter' />
+        <setting name='FilterTypeOfTime' value='Alla typer av tid' />
+        <setting name='FilterApprovalStatus' value='Alla' />
+    </settings>
+</timeduty>
