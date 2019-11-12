@@ -1,0 +1,1464 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<timeduty>
+<meta version='1.8.1' date='2019-11-12 07:54:15' />
+<settings>
+    <setting name='ReportName' value='Time report - Detailed' />
+    <setting name='CompanyName' value='Responsive' />
+    <setting name='Currency' value='SEK' />
+    <setting name='FilterDateFrom' value='2019-10-01 00:00:00' />
+    <setting name='FilterDateTo' value='2019-11-01 00:00:00' />
+    <setting name='FilterProject' value='Alla projekt' />
+    <setting name='FilterUserName' value='Alla användare' />
+    <setting name='FilterClient' value='Alla klienter' />
+    <setting name='FilterUserGroup' value='Alla resultatenheter' />
+    <setting name='FilterTypeOfTime' value='Alla typer av tid' />
+    <setting name='FilterApprovalStatus' value='Alla' />
+</settings>
+<timereport>
+  <reportrow>
+    <date>2019-10-01</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-01</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>6520,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-01</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-02</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-02</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>6:45</reportedtime>
+    <cost>5501,25</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-02</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8:45</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-03</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>6</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-03</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <activityname>Möte</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Normala timmar</typeoftime>
+    <comment>Tisdagsmöte på en Torsdag</comment>
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-03</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>3:30</reportedtime>
+    <cost>2852,50</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-03</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>6:45</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-03</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>4</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-04</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-04</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>7:45</reportedtime>
+    <cost>6316,25</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-04</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-04</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>5:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-07</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>6</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-07</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>6520,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-07</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-07</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-08</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8:30</reportedtime>
+    <cost>6927,50</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-08</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>9</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-08</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>6:45</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-09</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>5</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-09</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <activityname>Möte</activityname>
+    <reportedtime>2</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Normala timmar</typeoftime>
+    <comment>Förberedelse för Devlin (tror det var onsdagen)</comment>
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-09</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>6520,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-09</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8:15</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-10</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Frånvaro</project>
+    <activityname>VAB</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Lediga timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-10</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8:30</reportedtime>
+    <cost>6927,50</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-10</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>7:45</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-10</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-11</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>6</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-11</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8:30</reportedtime>
+    <cost>6927,50</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-11</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>7:15</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-11</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>5</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-14</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>5</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-14</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>6520,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-14</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8:15</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-14</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-15</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-15</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>6520,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-15</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-15</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-16</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <activityname>Utbildning/Konferens</activityname>
+    <reportedtime>9</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Normala timmar</typeoftime>
+    <comment>Devlin workshop</comment>
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-16</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8:15</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-17</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <activityname>Utbildning/Konferens</activityname>
+    <reportedtime>10</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Normala timmar</typeoftime>
+    <comment>Devlin konferensdag</comment>
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-17</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <activityname>Utbildning/Konferens</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Normala timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-18</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <activityname>Utbildning/Konferens</activityname>
+    <reportedtime>5</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Normala timmar</typeoftime>
+    <comment>Devlin workshop del1</comment>
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-18</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>6:15</reportedtime>
+    <cost>5093,75</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-18</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>7:15</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-21</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-21</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>7:15</reportedtime>
+    <cost>5908,75</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-21</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>9</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-21</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>7:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-22</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>5</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-22</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>9:15</reportedtime>
+    <cost>7538,75</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-22</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-22</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-23</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-23</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>6520,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-23</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-23</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>6:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-24</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-24</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>7:45</reportedtime>
+    <cost>6316,25</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-24</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Frånvaro</project>
+    <activityname>VAB</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Lediga timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-24</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-25</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-25</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>7:30</reportedtime>
+    <cost>6112,50</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-25</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>7:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-25</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>7:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-28</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Frånvaro</project>
+    <activityname>Semester</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Lediga timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-28</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>9:15</reportedtime>
+    <cost>7538,75</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-28</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Frånvaro</project>
+    <activityname>Sjukdom</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Sjukfrånvarotimmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-28</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-29</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Frånvaro</project>
+    <activityname>Semester</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Lediga timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-29</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>9</reportedtime>
+    <cost>7335,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-29</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Frånvaro</project>
+    <activityname>Sjukdom</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Sjukfrånvarotimmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-29</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>7:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-30</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Responsive</client>
+    <project>Frånvaro</project>
+    <activityname>Semester</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Lediga timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-30</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>9:15</reportedtime>
+    <cost>7538,75</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-30</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-30</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>6:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-31</date>
+    <username>anders.bodelius@responsive.se</username>
+    <name>Anders Bodelius</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil testare</project>
+    <activityname>Test &amp; Utveckling</activityname>
+    <reportedtime>6</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-31</date>
+    <username>joakim.sarehag@responsive.se</username>
+    <name>Joakim Särehag</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>CPA Global</client>
+    <project>CPA Systemutveckling</project>
+    <activityname>Systemutveckling</activityname>
+    <reportedtime>9</reportedtime>
+    <cost>7335,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-31</date>
+    <username>roger.magnesved@responsive.se</username>
+    <name>Roger Magnesved</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Actia</client>
+    <project>ActiaProjekt</project>
+    <activityname>TeamArbete</activityname>
+    <reportedtime>8:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2019-10-31</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Veoneer</client>
+    <project>Agil Coachning</project>
+    <activityname>Coachning</activityname>
+    <reportedtime>7:30</reportedtime>
+    <cost>0,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+</timereport>
+</timeduty>
