@@ -14,6 +14,13 @@ class TimereportHandler(xml.sax.ContentHandler):
         self.stars = ""
         self.description = ""
 
+    def startElement(self, tag, attributes):
+        self.CurrentData = tag
+        if tag == "movie":
+            print("*****Movie*****")
+            title = attributes["title"]
+            print("Title:", title)
+
 
 if (__name__ == "__main__"):
 
