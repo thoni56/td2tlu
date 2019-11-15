@@ -5,15 +5,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="timeduty">
 
-<SalaryData <xsl:value-of select>>
-<body>
-<ul>
-    <xsl:for-each select="timereport/reportrow">
-        <li><xsl:value-of select="username"/></li>
-    </xsl:for-each>
-</ul>
-</body>
-</html>   
+<SalaryData>
+    <TimeCodes>
+    </TimeCodes>
+    <SalaryDataEmployee FromDate="" ToDate="">
+        <xsl:for-each select="timereport/reportrow">
+            <TimeCode><xsl:value-of select="username"/></li>
+        </xsl:for-each>
+    <SalaryDataEmployee>
+</SalaryData>
 
 </xsl:template>
 
