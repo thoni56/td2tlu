@@ -2,6 +2,7 @@
 
 import xml.etree.ElementTree as ET
 import argparse
+import datetime
 
 
 class TimereportConverter():
@@ -13,6 +14,11 @@ class TimereportConverter():
             return None
         xml = ET.ElementTree()
         return xml
+
+
+def is_row_for(row, user):
+    u = row.find('username')
+    return u.text == user
 
 
 if (__name__ == "__main__"):
@@ -32,13 +38,31 @@ if (__name__ == "__main__"):
         if 'FilterDateTo' in setting.attrib.values():
             to_date = setting.attrib['value'].split(' ', 1)[0]
 
+    report = indata.find('timereport')
+    rows = report.findall('reportrow')
+    anders = filter(lambda r: is_row_for(
+        r, 'anders.bodelius@responsive.se'), rows)
+    anders = list(anders)
+
     print('Writing...')
     tree = ET.Element('SalaryData')
+    tree.set('ProgramName', 'td2tlu.py')
+    tree.set('Created', datetime.date.today().strftime("%Y-%m-%d"))
+    tree.set('CompanyName', 'Responsive AB')
+    tree.set('OrgNo', '556565-8472')
+
     timecodes = ET.SubElement(tree, 'TimeCodes')
-    timecode_sjuk = ET.SubElement(timecodes, 'TimeCode', {
+    ET.SubElement(timecodes, 'TimeCode', {
         'Code': '1', 'TimeCodeName': 'Sjukdom'})
-    timecode_vab = ET.SubElement(timecodes, 'TimeCode', {
+    ET.SubElement(timecodes, 'TimeCode', {
         'Code': '2', 'TimeCodeName': 'VAB'})
-    timecode_semester = ET.SubElement(timecodes, 'TimeCode', {
+    ET.SubElement(timecodes, 'TimeCode', {
         'Code': '3', 'TimeCodeName': 'Semester'})
+
+    salary_data = ET.SubElement(tree, 'SalaryDataEmployee', {
+        'FromDate': from_date, 'ToDate': to_date})
+    employee = ET.SubElement(salary_data, 'Employee', {
+        'EmploymentNo': '1', 'FirstName': 'Anders', 'LastName': 'Bodelius', 'FromDate': from_date, 'ToDate': to_date})
+    ET.SubElement(employee, 'NormalWorkingTimes')
+
     print(ET.tostring(tree))
