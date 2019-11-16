@@ -10,9 +10,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </TimeCodes>
     <SalaryDataEmployee FromDate="" ToDate="">
         <xsl:for-each select="timereport/reportrow">
-            <TimeCode><xsl:value-of select="username"/></li>
+            <TimeCode>
+                <xsl:value-of select="username"/>
+            </TimeCode>
         </xsl:for-each>
-    <SalaryDataEmployee>
+    </SalaryDataEmployee>
 </SalaryData>
 
 </xsl:template>
