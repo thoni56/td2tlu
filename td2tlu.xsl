@@ -12,6 +12,7 @@
     <xsl:template match="timeduty">
         <SalaryData>
             <TimeCodes>
+                <TimeCode>Not Implemented</TimeCode>
             </TimeCodes>
             <SalaryDataEmployee FromDate="{$fromDate}" ToDate="{$toDate}">
                 <xsl:for-each select="timereport/reportrow">
