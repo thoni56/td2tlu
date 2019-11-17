@@ -15,9 +15,12 @@
                 <TimeCode>Not Implemented</TimeCode>
             </TimeCodes>
             <SalaryDataEmployee FromDate="{$fromDate}" ToDate="{$toDate}">
-                <xsl:for-each select="timereport/reportrow">
-                    <xsl:sort select="username"/>
-                    <xsl:call-template name="employee" />
+                <xsl:for-each select="timereport/reportrow/username[not(.=preceding::*)]">
+                    <Employee EmploymentNo="" FirstName="{substring-before(../name,' ')}" Name="{substring-after(../name,' ')}" FromDate="{$fromDate}" ToDate="{$toDate}">
+                        <NormalWorkingTimes />
+                        <Times>
+                        </Times>
+                    </Employee>
                 </xsl:for-each>
             </SalaryDataEmployee>
         </SalaryData>
