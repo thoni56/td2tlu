@@ -24,8 +24,9 @@
 
     <xsl:template name="employee">
         <Employee EmploymentNo="" FirstName="{substring-before(name,' ')}" Name="{substring-after(name,' ')}" FromDate="{$fromDate}" ToDate="{$toDate}">
-            <xsl:value-of select="username"/>
-            <xsl:value-of select="date"/>
+            <NormalWorkingTimes />
+            <Times>
+            </Times>
         </Employee>
     </xsl:template>
 </xsl:stylesheet>
