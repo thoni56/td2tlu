@@ -10,7 +10,6 @@ class TimereportConverter():
         pass
 
     def convert(self, file):
-        print('Reading...')
         if not file:
             return None
         indata = ET.parse(file)
@@ -30,7 +29,6 @@ class TimereportConverter():
         else :
             anders = None
 
-        print('Writing...')
         salary_data = ET.Element('SalaryData')
         salary_data.set('ProgramName', 'td2tlu.py')
         salary_data.set('Created', datetime.date.today().strftime("%Y-%m-%d"))
@@ -46,15 +44,15 @@ class TimereportConverter():
             'Code': '3', 'TimeCodeName': 'Semester'})
 
         if anders is not None:
-            ET.SubElement(salary_data, 'SalaryDataEmployee', {
+            salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
                 'FromDate': from_date, 'ToDate': to_date})
-            employee = ET.SubElement(salary_data, 'Employee', {
+            employee = ET.SubElement(salary_data_employee, 'Employee', {
                 'EmploymentNo': '1', 'FirstName': 'Anders', 'LastName': 'Bodelius', 'FromDate': from_date, 'ToDate': to_date})
             ET.SubElement(employee, 'NormalWorkingTimes')
             ET.SubElement(employee, 'TimeAdjustments')
             ET.SubElement(employee, 'TimeBalance')
             ET.SubElement(employee, 'RegOutlays')
-        return salary_data
+        return ET.tostring(salary_data, pretty_print=True, xml_declaration=True, encoding='ISO-8859-1').decode()
 
 
 def is_row_for(row, user):
@@ -72,6 +70,6 @@ if (__name__ == "__main__"):
     args = argparser.parse_args()
 
     converter = TimereportConverter()
-    tree = converter.convert(args.file)
+    output = converter.convert(args.file)
 
-    print(ET.tostring(tree, pretty_print=True).decode())
+    print(output)

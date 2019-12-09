@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Python: Current File (Integrated Terminal)",
             "type": "python",
@@ -15,12 +16,12 @@
             ]
         },
         {
-            "name": "td2tlu single_reportrow.xml",
+            "name": "td2tlu test_1_anstalld_1_registrering_franvaro-input.xml",
             "type": "python",
             "request": "launch",
             "module": "td2tlu",
             "console": "integratedTerminal",
-            "args": ["single_reportrow.xml"]
+            "args": ["test_1_anstalld_1_registrering_franvaro-input.xml "]
         }
     ]
 }

@@ -13,8 +13,7 @@ class TD2TLUTest(unittest.TestCase):
 
     def convert_and_compare(self, case_name):
         converter = TimereportConverter()
-        salary_data = converter.convert(case_name+'.xml')
-        output = ET.tostring(salary_data, pretty_print=True).decode()
+        output = converter.convert(case_name+'.xml')
         output_file = open(case_name+'.output', 'w+')
         print(output, file=output_file)
         with open(case_name+'.tlu') as f:
@@ -25,6 +24,6 @@ class TD2TLUTest(unittest.TestCase):
         self.convert_and_compare('minimal')
 
     def test_1_employee_1_registration(self):
-        self.convert_and_compare('test_1_anstalld_1_registrering_franvaro')
+        self.convert_and_compare('1_anstalld_1_registrering_franvaro')
         
 
