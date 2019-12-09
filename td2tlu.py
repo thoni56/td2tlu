@@ -39,7 +39,7 @@ if (__name__ == "__main__"):
             to_date = setting.attrib['value'].split(' ', 1)[0]
 
     report = indata.find('timereport')
-    if report:
+    if report is not None:
         rows = report.findall('reportrow')
     else :
         exit("No data in input file")
@@ -71,3 +71,5 @@ if (__name__ == "__main__"):
     ET.SubElement(employee, 'TimeAdjustments')
     ET.SubElement(employee, 'TimeBalance')
     ET.SubElement(employee, 'RegOutlays')
+
+    print(ET.tostring(tree, pretty_print=True).decode())
