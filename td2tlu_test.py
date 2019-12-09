@@ -13,7 +13,7 @@ class TD2TLUTest(unittest.TestCase):
 
     def convert_and_compare(self, case_name):
         converter = TimereportConverter()
-        output = converter.convert(case_name+'.xml')
+        output = converter.convert(case_name+'.xml', creation_date="2018-04-01")
         output_file = open(case_name+'.output', 'w+')
         print(output, file=output_file)
         with open(case_name+'.tlu') as f:
