@@ -68,5 +68,6 @@ if (__name__ == "__main__"):
     employee = ET.SubElement(salary_data, 'Employee', {
         'EmploymentNo': '1', 'FirstName': 'Anders', 'LastName': 'Bodelius', 'FromDate': from_date, 'ToDate': to_date})
     ET.SubElement(employee, 'NormalWorkingTimes')
-
-    print(ET.tostring(tree))
+    ET.SubElement(employee, 'TimeAdjustments')
+    ET.SubElement(employee, 'TimeBalance')
+    ET.SubElement(employee, 'RegOutlays')
