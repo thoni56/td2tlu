@@ -18,7 +18,7 @@ class TD2TLUTest(unittest.TestCase):
         tree = converter.convert(input)
         self.assertEqual(0, 0)
 
-    def test_converts_180301_sample_file_correctly(self):
+    def test_1_employee_1_registration(self):
         converter = TimereportConverter()
         input_tree = ET.parse('test_1_anstalld_1_registrering_franvaro-input.xml')
         output_tree = converter.convert(input_tree)
