@@ -16,4 +16,15 @@ class TD2TLUTest(unittest.TestCase):
         input = ET.parse('minimal.xml')
 
         tree = converter.convert(input)
-        self.assertEquals(0, 0)
+        self.assertEqual(0, 0)
+
+    def test_converts_180301_sample_file_correctly(self):
+        converter = TimereportConverter()
+        input_tree = ET.parse('test_1_anstalld_1_registrering_franvaro-input.xml')
+        output_tree = converter.convert(input_tree)
+        output = ET.tostring(output_tree, pretty_print=True).decode()
+        with open("test_1_anstalld_1_registrering_franvaro-expected.tlu") as f:
+            expected = f.read()
+        self.assertEqual(output, expected)
+        
+
