@@ -39,7 +39,11 @@ if (__name__ == "__main__"):
             to_date = setting.attrib['value'].split(' ', 1)[0]
 
     report = indata.find('timereport')
-    rows = report.findall('reportrow')
+    if report:
+        rows = report.findall('reportrow')
+    else :
+        exit("No data in input file")
+
     anders = filter(lambda r: is_row_for(
         r, 'anders.bodelius@responsive.se'), rows)
     anders = list(anders)
