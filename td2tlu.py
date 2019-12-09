@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 import argparse
 import datetime
 

@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 import unittest
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 from td2tlu import TimereportConverter
 
 
