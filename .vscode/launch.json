@@ -15,11 +15,12 @@
             ]
         },
         {
-            "name": "Python: Module",
+            "name": "td2tlu single_reportrow.xml",
             "type": "python",
             "request": "launch",
-            "module": "enter-your-module-name-here",
-            "console": "integratedTerminal"
+            "module": "td2tlu",
+            "console": "integratedTerminal",
+            "args": ["single_reportrow.xml"]
         }
     ]
 }
