@@ -6,8 +6,8 @@
     <setting name='ReportName' value='Time report - Detailed' />
     <setting name='CompanyName' value='Responsive' />
     <setting name='Currency' value='SEK' />
-    <setting name='FilterDateFrom' value='2019-10-01 00:00:00' />
-    <setting name='FilterDateTo' value='2019-11-01 00:00:00' />
+    <setting name='FilterDateFrom' value='2018-03-01 00:00:00' />
+    <setting name='FilterDateTo' value='2018-03-31 00:00:00' />
     <setting name='FilterProject' value='Alla projekt' />
     <setting name='FilterUserName' value='Alla användare' />
     <setting name='FilterClient' value='Alla klienter' />
@@ -17,7 +17,7 @@
   </settings>
   <timereport>
     <reportrow>
-      <date>2019-10-10</date>
+      <date>2018-03-10</date>
       <username>anders.bodelius@responsive.se</username>
       <name>Anders Bodelius</name>
       <department>HQ</department>

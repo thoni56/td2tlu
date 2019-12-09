@@ -6,25 +6,25 @@ from td2tlu import TimereportConverter
 
 class TD2TLUTest(unittest.TestCase):
 
-    def test_converts_an_empty_tree_to_an_empty_tree(self):
+    def test_converts_no_file_to_None(self):
         converter = TimereportConverter()
         tree = converter.convert(None)
         self.assertEqual(tree, None)
 
-    def test_converts_a_single_xml_node_to_tlu_xml_root(self):
+    def convert_and_compare(self, case_name):
         converter = TimereportConverter()
-        input = ET.parse('minimal.xml')
-
-        tree = converter.convert(input)
-        self.assertEqual(0, 0)
-
-    def test_1_employee_1_registration(self):
-        converter = TimereportConverter()
-        input_tree = ET.parse('test_1_anstalld_1_registrering_franvaro-input.xml')
-        output_tree = converter.convert(input_tree)
-        output = ET.tostring(output_tree, pretty_print=True).decode()
-        with open("test_1_anstalld_1_registrering_franvaro-expected.tlu") as f:
+        salary_data = converter.convert(case_name+'.xml')
+        output = ET.tostring(salary_data, pretty_print=True).decode()
+        output_file = open(case_name+'.output', 'w+')
+        print(output, file=output_file)
+        with open(case_name+'.tlu') as f:
             expected = f.read()
         self.assertEqual(output, expected)
+            
+    def test_converts_a_minimal_input_to_tlu_with_all_required_elements(self):
+        self.convert_and_compare('minimal')
+
+    def test_1_employee_1_registration(self):
+        self.convert_and_compare('test_1_anstalld_1_registrering_franvaro')
         
 
