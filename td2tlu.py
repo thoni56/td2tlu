@@ -3,6 +3,7 @@
 import lxml.etree as ET
 import argparse
 import datetime
+import sys
 
 
 class User():
@@ -75,23 +76,27 @@ class TimereportConverter():
                     r, user.id), rows)
                 registrations = list(registrations)
 
-                # TODO Filter out only registrations with "interesting" timecodes
+                absence_registrations = list(filter(is_absence_registration, registrations))
 
-                if len(registrations) > 0:
+                if len(absence_registrations) > 0:
                     employee = ET.SubElement(salary_data_employee, 'Employee', {
                         'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last, 
                         'FromDate': from_date, 'ToDate': to_date})
                     ET.SubElement(employee, 'NormalWorkingTimes')
                     times = ET.SubElement(employee, 'Times')
-                    for registration in registrations:
+                    for absence_registration in absence_registrations:
+                        activity_name = absence_registration.find('activityname').text
                         try:
-                            timecode = self.timecode_lookup(registration.find('activityname').text)
+                            timecode = self.timecode_lookup(activity_name)
                             time = ET.SubElement(times, 'Time')
-                            time.set('DateOfReport', registration.find('date').text)
+                            time.set('DateOfReport', absence_registration.find('date').text)
                             time.set('TimeCode', timecode)
-                            time.set('SumOfHours', registration.find('reportedtime').text)
+                            # TODO Convert HH:MM to decimal format?
+                            time.set('SumOfHours', absence_registration.find('reportedtime').text)
                         except:
-                            pass # Did not find that activity, so ignore it
+                            # Did not find that activity, print a warning
+                            print("WARNING! Unknown absence activity - '{}' ignored".format(activity_name), file=sys.stderr)
+
                     ET.SubElement(employee, 'TimeAdjustments')
                     ET.SubElement(employee, 'TimeBalances')
                     # TODO Handle expenses
@@ -105,6 +110,8 @@ def is_row_for(row, user):
     u = row.find('username')
     return u.text == user
 
+def is_absence_registration(registration):
+    return registration.find('project').text == "Frånvaro"
 
 if (__name__ == "__main__"):
 
