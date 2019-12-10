@@ -70,6 +70,8 @@ class TimereportConverter():
         if report is not None:
             rows = report.findall('reportrow')
 
+            salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
+                'FromDate': from_date, 'ToDate': to_date})
             for user in self.users:
                 # TODO For now, collect all data for Anders (user[0])
                 registrations = filter(lambda r: is_row_for(
