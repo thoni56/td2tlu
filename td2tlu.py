@@ -78,25 +78,26 @@ class TimereportConverter():
                     r, user.id), rows)
                 registrations = list(registrations)
 
-                salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
-                    'FromDate': from_date, 'ToDate': to_date})
-                employee = ET.SubElement(salary_data_employee, 'Employee', {
-                    'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last, 
-                    'FromDate': from_date, 'ToDate': to_date})
-                ET.SubElement(employee, 'NormalWorkingTimes')
-                times = ET.SubElement(employee, 'Times')
-                for registration in registrations:
-                    try:
-                        timecode = self.timecode_lookup(registration.find('activityname').text)
-                        time = ET.SubElement(times, 'Time')
-                        time.set('DateOfReport', registration.find('date').text)
-                        time.set('TimeCode', timecode)
-                        time.set('SumOfHours', registration.find('reportedtime').text)
-                    except:
-                        pass # Did not find that activity, so ignore it
-                ET.SubElement(employee, 'TimeAdjustments')
-                ET.SubElement(employee, 'TimeBalances')
-                ET.SubElement(employee, 'RegOutlays')
+                # TODO Filter out only registrations with "interesting" timecodes
+
+                if len(registrations) > 0:
+                    employee = ET.SubElement(salary_data_employee, 'Employee', {
+                        'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last, 
+                        'FromDate': from_date, 'ToDate': to_date})
+                    ET.SubElement(employee, 'NormalWorkingTimes')
+                    times = ET.SubElement(employee, 'Times')
+                    for registration in registrations:
+                        try:
+                            timecode = self.timecode_lookup(registration.find('activityname').text)
+                            time = ET.SubElement(times, 'Time')
+                            time.set('DateOfReport', registration.find('date').text)
+                            time.set('TimeCode', timecode)
+                            time.set('SumOfHours', registration.find('reportedtime').text)
+                        except:
+                            pass # Did not find that activity, so ignore it
+                    ET.SubElement(employee, 'TimeAdjustments')
+                    ET.SubElement(employee, 'TimeBalances')
+                    ET.SubElement(employee, 'RegOutlays')
 
         return ET.tostring(salary_data, pretty_print=True,
                     doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
