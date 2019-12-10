@@ -84,10 +84,14 @@ class TimereportConverter():
                 ET.SubElement(employee, 'NormalWorkingTimes')
                 times = ET.SubElement(employee, 'Times')
                 for registration in registrations:
-                    time = ET.SubElement(times, 'Time')
-                    time.set('DateOfReport', registration.find('date').text)
-                    time.set('TimeCode', self.timecode_lookup(registration.find('activityname').text))
-                    time.set('SumOfHours', registration.find('reportedtime').text)
+                    try:
+                        timecode = self.timecode_lookup(registration.find('activityname').text)
+                        time = ET.SubElement(times, 'Time')
+                        time.set('DateOfReport', registration.find('date').text)
+                        time.set('TimeCode', timecode)
+                        time.set('SumOfHours', registration.find('reportedtime').text)
+                    except:
+                        pass # Did not find that activity, so ignore it
                 ET.SubElement(employee, 'TimeAdjustments')
                 ET.SubElement(employee, 'TimeBalances')
                 ET.SubElement(employee, 'RegOutlays')
