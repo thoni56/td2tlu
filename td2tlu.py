@@ -80,7 +80,7 @@ class TimereportConverter():
 
                 if len(absence_registrations) > 0:
                     employee = ET.SubElement(salary_data_employee, 'Employee', {
-                        'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last, 
+                        'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last,
                         'FromDate': from_date, 'ToDate': to_date})
                     ET.SubElement(employee, 'NormalWorkingTimes')
                     times = ET.SubElement(employee, 'Times')
@@ -91,8 +91,8 @@ class TimereportConverter():
                             time = ET.SubElement(times, 'Time')
                             time.set('DateOfReport', absence_registration.find('date').text)
                             time.set('TimeCode', timecode)
-                            # TODO Convert HH:MM to decimal format?
-                            time.set('SumOfHours', absence_registration.find('reportedtime').text)
+                            time_in_fractions = convert_time_to_decimal(absence_registration.find('reportedtime').text)
+                            time.set('SumOfHours', time_in_fractions)
                         except:
                             # Did not find that activity, print a warning
                             print("WARNING! Unknown absence activity - '{}' ignored".format(activity_name), file=sys.stderr)
@@ -119,7 +119,7 @@ def convert_time_to_decimal(time):
     hours = fields[0] if len(fields) > 0 else 0.0
     minutes = fields[1] if len(fields) > 1 else 0.0
     value = float(hours) + (float(minutes) / 60.0)
-    return "{:.3g}".format(value)
+    return "{0:.2f}".format(value).rstrip('0').rstrip('.')
 
 if (__name__ == "__main__"):
 
