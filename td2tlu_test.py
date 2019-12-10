@@ -20,7 +20,7 @@ class TD2TLUTest(unittest.TestCase):
         print(output, file=output_file)
         with open(case_name+'.tlu') as f:
             expected = f.read()
-        self.assertEqual(output, expected)
+        self.assertEqual(output.strip(), expected.strip())
             
     def test_converts_a_minimal_input_to_tlu_with_all_required_elements(self):
         self.convert_and_compare('minimal')
