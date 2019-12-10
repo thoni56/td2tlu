@@ -14,21 +14,17 @@ class User():
 
 class TimereportConverter():
 
-    timecodes = {
-        'Sjukdom':'1',
-        'VAB':'2',
-        'Semester':'3'
+    timecode_table = {
+        'Sjukdom':'3107',
+        'VAB':'3318',
+        'Semester':'3201'
     }
 
     def generate_timecodes(self):
         timecodes = ET.Element('TimeCodes')
-        # TODO create from timecode table
-        ET.SubElement(timecodes, 'TimeCode', {
-            'Code': '1', 'TimeCodeName': 'Sjukdom'})
-        ET.SubElement(timecodes, 'TimeCode', {
-            'Code': '2', 'TimeCodeName': 'VAB'})
-        ET.SubElement(timecodes, 'TimeCode', {
-            'Code': '3', 'TimeCodeName': 'Semester'})
+        for name, code in self.timecode_table.items():
+            ET.SubElement(timecodes, 'TimeCode', {
+                'Code': code, 'TimeCodeName': name})
         return timecodes
 
     user_table = [
@@ -39,11 +35,11 @@ class TimereportConverter():
     ]
 
     def timecode_lookup(self, activity_name):
-        return self.timecodes[activity_name]
+        return self.timecode_table[activity_name]
 
     def __init__(self, timecodes=None, users=None):
         if timecodes is not None:
-            self.timecodes = timecodes
+            self.timecode_table = timecodes
         if users is not None:
             self.user_table = users
 
