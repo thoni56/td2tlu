@@ -78,6 +78,7 @@ class TimereportConverter():
 
                 absence_registrations = list(filter(is_absence_registration, registrations))
 
+
                 if len(absence_registrations) > 0:
                     employee = ET.SubElement(salary_data_employee, 'Employee', {
                         'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last,

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<timeduty>
+<meta version='1.8.1' date='2019-12-11 00:30:30' />
+<settings>
+    <setting name='ReportName' value='Expense report' />
+    <setting name='CompanyName' value='Responsive' />
+    <setting name='Currency' value='SEK' />
+    <setting name='FilterDateFrom' value='2019-11-01 00:00:00' />
+    <setting name='FilterDateTo' value='2019-12-01 00:00:00' />
+    <setting name='FilterProject' value='Alla projekt' />
+    <setting name='FilterUserName' value='Alla användare' />
+    <setting name='FilterClient' value='Alla klienter' />
+    <setting name='FilterUserGroup' value='Alla resultatenheter' />
+    <setting name='FilterTypeOfExpense' value='Alla typer av utlägg' />
+</settings>
+<expensereport>
+  <reportrow>
+    <date>2019-11-19</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <expensetype />
+    <description>KJell&amp;Co</description>
+    <amount>649,80</amount>
+  </reportrow>
+  <reportrow>
+    <date>2019-11-22</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <client>Responsive</client>
+    <project>Internt</project>
+    <expensetype />
+    <description>Kjell&amp;Co</description>
+    <amount>349,90</amount>
+  </reportrow>
+</expensereport>
+</timeduty>
