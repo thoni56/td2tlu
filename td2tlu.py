@@ -5,6 +5,13 @@ import argparse
 import datetime
 
 
+class User():
+    def __init__(self, id, number, first, last):
+        self.id = id
+        self.number = number
+        self.first = first
+        self.last = last
+
 class TimereportConverter():
 
     timecodes = {
@@ -25,18 +32,20 @@ class TimereportConverter():
         return timecodes
 
     users = [
-        {'anders.bodelius@responsive.se', 1, 'Anders', 'Bodelius'},
-        {'roger.magnesved@responsive.se', 2, 'Roger', 'Magnesved'},
-        {'joakim.sarehag@responsive.se', 3, 'Joakim', 'Särehag'},
-        {'thomas.nilefalk@responsive.se', 4, 'Thomas', 'Nilefalk'}
+        User('anders.bodelius@responsive.se', '1', 'Anders', 'Bodelius'),
+        User('roger.magnesved@responsive.se', '2', 'Roger', 'Magnesved'),
+        User('joakim.sarehag@responsive.se', '3', 'Joakim', 'Särehag'),
+        User('thomas.nilefalk@responsive.se', '4', 'Thomas', 'Nilefalk')
     ]
 
     def timecode_lookup(self, activity_name):
         return self.timecodes[activity_name]
 
-    def __init__(self, timecodes=None):
+    def __init__(self, timecodes=None, users=None):
         if timecodes is not None:
             self.timecodes = timecodes
+        if users is not None:
+            self.users = users
 
     def convert(self, file, creation_date=datetime.date.today().strftime("%Y-%m-%d")):
         if not file:
@@ -61,25 +70,27 @@ class TimereportConverter():
         if report is not None:
             rows = report.findall('reportrow')
 
-            # TODO For now, collect all data for Anders
-            anders = filter(lambda r: is_row_for(
-                r, 'anders.bodelius@responsive.se'), rows)
-            anders = list(anders)
+            for user in self.users:
+                # TODO For now, collect all data for Anders (user[0])
+                registrations = filter(lambda r: is_row_for(
+                    r, user.id), rows)
+                registrations = list(registrations)
 
-            salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
-                'FromDate': from_date, 'ToDate': to_date})
-            employee = ET.SubElement(salary_data_employee, 'Employee', {
-                'EmploymentNo': '1', 'FirstName': 'Anders', 'Name': 'Bodelius', 'FromDate': from_date, 'ToDate': to_date})
-            ET.SubElement(employee, 'NormalWorkingTimes')
-            times = ET.SubElement(employee, 'Times')
-            for e in anders:
-                time = ET.SubElement(times, 'Time')
-                time.set('DateOfReport', e.find('date').text)
-                time.set('TimeCode', self.timecode_lookup(e.find('activityname').text))
-                time.set('SumOfHours', e.find('reportedtime').text)
-            ET.SubElement(employee, 'TimeAdjustments')
-            ET.SubElement(employee, 'TimeBalances')
-            ET.SubElement(employee, 'RegOutlays')
+                salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
+                    'FromDate': from_date, 'ToDate': to_date})
+                employee = ET.SubElement(salary_data_employee, 'Employee', {
+                    'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last, 
+                    'FromDate': from_date, 'ToDate': to_date})
+                ET.SubElement(employee, 'NormalWorkingTimes')
+                times = ET.SubElement(employee, 'Times')
+                for registration in registrations:
+                    time = ET.SubElement(times, 'Time')
+                    time.set('DateOfReport', registration.find('date').text)
+                    time.set('TimeCode', self.timecode_lookup(registration.find('activityname').text))
+                    time.set('SumOfHours', registration.find('reportedtime').text)
+                ET.SubElement(employee, 'TimeAdjustments')
+                ET.SubElement(employee, 'TimeBalances')
+                ET.SubElement(employee, 'RegOutlays')
 
         return ET.tostring(salary_data, pretty_print=True,
                     doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
