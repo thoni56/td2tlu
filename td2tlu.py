@@ -32,10 +32,10 @@ class TimereportConverter():
         return timecodes
 
     users = [
-        User('anders.bodelius@responsive.se', '1', 'Anders', 'Bodelius'),
-        User('roger.magnesved@responsive.se', '2', 'Roger', 'Magnesved'),
-        User('joakim.sarehag@responsive.se', '3', 'Joakim', 'Särehag'),
-        User('thomas.nilefalk@responsive.se', '4', 'Thomas', 'Nilefalk')
+        User('thomas.nilefalk@responsive.se', '102', 'Thomas', 'Nilefalk'),
+        User('roger.magnesved@responsive.se', '105', 'Roger', 'Magnesved'),
+        User('anders.bodelius@responsive.se', '107', 'Anders', 'Bodelius'),
+        User('joakim.sarehag@responsive.se', '112', 'Joakim', 'Särehag'),
     ]
 
     def timecode_lookup(self, activity_name):
