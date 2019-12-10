@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 import unittest
 import lxml.etree as ET
-from td2tlu import TimereportConverter, User
+from td2tlu import TimereportConverter, User, convert_time_to_decimal
 
 
 class TD2TLUTest(unittest.TestCase):
@@ -30,5 +30,15 @@ class TD2TLUTest(unittest.TestCase):
         
     def test_1_employee_2_registration(self):
         self.convert_and_compare('1_anstalld_2_registrering_franvaro')
-        
+    
+    def test_convert_time_to_decimal_handles_whole_hours(self):
+        self.assertEqual(convert_time_to_decimal('8'), '8')
 
+    def test_convert_time_to_decimal_handles_hours_zero_minutes(self):
+        self.assertEqual(convert_time_to_decimal('8:00'), '8')
+
+    def test_convert_time_to_decimal_handles_hours_with_6_minutes(self):
+        self.assertEqual(convert_time_to_decimal('8:06'), '8.1')
+
+    def test_convert_time_to_decimal_handles_hours_with_13_minutes(self):
+        self.assertEqual(convert_time_to_decimal('8:13'), '8.22')

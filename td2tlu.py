@@ -113,6 +113,14 @@ def is_row_for(row, user):
 def is_absence_registration(registration):
     return registration.find('project').text == "Frånvaro"
 
+
+def convert_time_to_decimal(time):
+    fields = time.split(":")
+    hours = fields[0] if len(fields) > 0 else 0.0
+    minutes = fields[1] if len(fields) > 1 else 0.0
+    value = float(hours) + (float(minutes) / 60.0)
+    return "{:.3g}".format(value)
+
 if (__name__ == "__main__"):
 
     argparser = argparse.ArgumentParser(
