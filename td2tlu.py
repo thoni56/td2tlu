@@ -31,7 +31,7 @@ class TimereportConverter():
             'Code': '3', 'TimeCodeName': 'Semester'})
         return timecodes
 
-    users = [
+    user_table = [
         User('thomas.nilefalk@responsive.se', '102', 'Thomas', 'Nilefalk'),
         User('roger.magnesved@responsive.se', '105', 'Roger', 'Magnesved'),
         User('anders.bodelius@responsive.se', '107', 'Anders', 'Bodelius'),
@@ -45,7 +45,7 @@ class TimereportConverter():
         if timecodes is not None:
             self.timecodes = timecodes
         if users is not None:
-            self.users = users
+            self.user_table = users
 
     def convert(self, file, creation_date=datetime.date.today().strftime("%Y-%m-%d")):
         if not file:
@@ -72,7 +72,7 @@ class TimereportConverter():
 
             salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
                 'FromDate': from_date, 'ToDate': to_date})
-            for user in self.users:
+            for user in self.user_table:
                 # TODO For now, collect all data for Anders (user[0])
                 registrations = filter(lambda r: is_row_for(
                     r, user.id), rows)
