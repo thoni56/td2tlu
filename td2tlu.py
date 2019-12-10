@@ -15,9 +15,11 @@ class User():
 class TimereportConverter():
 
     timecode_table = {
-        'Sjukdom':'3107',
-        'VAB':'3318',
-        'Semester':'3201'
+        'Semester':'040',
+        'Sjuk':'050',
+        'VAB':'060',
+        'Föräldraledig':'070',
+        'Tjänstledig':'090',
     }
 
     def generate_timecodes(self):
