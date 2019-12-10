@@ -69,7 +69,6 @@ class TimereportConverter():
             salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
                 'FromDate': from_date, 'ToDate': to_date})
             for user in self.user_table:
-                # TODO For now, collect all data for Anders (user[0])
                 registrations = filter(lambda r: is_row_for(
                     r, user.id), rows)
                 registrations = list(registrations)
@@ -93,6 +92,7 @@ class TimereportConverter():
                             pass # Did not find that activity, so ignore it
                     ET.SubElement(employee, 'TimeAdjustments')
                     ET.SubElement(employee, 'TimeBalances')
+                    # TODO Handle expenses
                     ET.SubElement(employee, 'RegOutlays')
 
         return ET.tostring(salary_data, pretty_print=True,
