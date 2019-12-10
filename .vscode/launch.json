@@ -16,12 +16,12 @@
             ]
         },
         {
-            "name": "td2tlu test_1_anstalld_1_registrering_franvaro-input.xml",
+            "name": "td2tlu some_test_file.xml",
             "type": "python",
             "request": "launch",
             "module": "td2tlu",
             "console": "integratedTerminal",
-            "args": ["test_1_anstalld_1_registrering_franvaro-input.xml "]
+            "args": ["sample-exportreport.xml"]
         }
     ]
 }
