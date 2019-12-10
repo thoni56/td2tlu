@@ -13,6 +13,24 @@ class TimereportConverter():
         'Semester':'3'
     }
 
+    def generate_timecodes(self):
+        timecodes = ET.Element('TimeCodes')
+        # TODO create from timecode table
+        ET.SubElement(timecodes, 'TimeCode', {
+            'Code': '1', 'TimeCodeName': 'Sjukdom'})
+        ET.SubElement(timecodes, 'TimeCode', {
+            'Code': '2', 'TimeCodeName': 'VAB'})
+        ET.SubElement(timecodes, 'TimeCode', {
+            'Code': '3', 'TimeCodeName': 'Semester'})
+        return timecodes
+
+    users = [
+        {'anders.bodelius@responsive.se', 1, 'Anders', 'Bodelius'},
+        {'roger.magnesved@responsive.se', 2, 'Roger', 'Magnesved'},
+        {'joakim.sarehag@responsive.se', 3, 'Joakim', 'Särehag'},
+        {'thomas.nilefalk@responsive.se', 4, 'Thomas', 'Nilefalk'}
+    ]
+
     def timecode_lookup(self, activity_name):
         return self.timecodes[activity_name]
 
@@ -30,46 +48,39 @@ class TimereportConverter():
             if 'FilterDateTo' in setting.attrib.values():
                 to_date = setting.attrib['value'].split(' ', 1)[0]
 
-        report = indata.find('timereport')
-        if report is not None:
-            rows = report.findall('reportrow')
-            # TODO For now, collect all data for Anders
-            anders = filter(lambda r: is_row_for(
-                r, 'anders.bodelius@responsive.se'), rows)
-            anders = list(anders)
-        else :
-            anders = None
-
         salary_data = ET.Element('SalaryData')
         salary_data.set('ProgramName', 'td2tlu.py')
         salary_data.set('Created', creation_date)
         salary_data.set('CompanyName', 'Responsive AB')
         salary_data.set('OrgNo', '556565-8472')
 
-        timecodes = ET.SubElement(salary_data, 'TimeCodes')
-        # TODO create from timecode table
-        ET.SubElement(timecodes, 'TimeCode', {
-            'Code': '1', 'TimeCodeName': 'Sjukdom'})
-        ET.SubElement(timecodes, 'TimeCode', {
-            'Code': '2', 'TimeCodeName': 'VAB'})
-        ET.SubElement(timecodes, 'TimeCode', {
-            'Code': '3', 'TimeCodeName': 'Semester'})
+        timecodes = self.generate_timecodes()
+        salary_data.append(timecodes)
 
-        if anders is not None:
+        report = indata.find('timereport')
+        if report is not None:
+            rows = report.findall('reportrow')
+
+            # TODO For now, collect all data for Anders
+            anders = filter(lambda r: is_row_for(
+                r, 'anders.bodelius@responsive.se'), rows)
+            anders = list(anders)
+
             salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
                 'FromDate': from_date, 'ToDate': to_date})
             employee = ET.SubElement(salary_data_employee, 'Employee', {
                 'EmploymentNo': '1', 'FirstName': 'Anders', 'Name': 'Bodelius', 'FromDate': from_date, 'ToDate': to_date})
+            ET.SubElement(employee, 'NormalWorkingTimes')
             times = ET.SubElement(employee, 'Times')
             for e in anders:
                 time = ET.SubElement(times, 'Time')
                 time.set('DateOfReport', e.find('date').text)
                 time.set('TimeCode', self.timecode_lookup(e.find('activityname').text))
                 time.set('SumOfHours', e.find('reportedtime').text)
-            ET.SubElement(employee, 'NormalWorkingTimes')
             ET.SubElement(employee, 'TimeAdjustments')
             ET.SubElement(employee, 'TimeBalances')
             ET.SubElement(employee, 'RegOutlays')
+
         return ET.tostring(salary_data, pretty_print=True,
                     doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
 

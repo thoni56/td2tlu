@@ -10,6 +10,7 @@
       <NormalWorkingTimes/>
       <Times>
         <Time DateOfReport="2018-03-10" TimeCode="2" SumOfHours="8"/>
+        <Time DateOfReport="2018-03-11" TimeCode="3" SumOfHours="8"/>
       </Times>
       <TimeAdjustments/>
       <TimeBalances/>

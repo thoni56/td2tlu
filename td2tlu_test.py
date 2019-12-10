@@ -6,11 +6,6 @@ from td2tlu import TimereportConverter
 
 class TD2TLUTest(unittest.TestCase):
 
-    def test_converts_no_file_to_None(self):
-        converter = TimereportConverter()
-        tree = converter.convert(None)
-        self.assertEqual(tree, None)
-
     def convert_and_compare(self, case_name):
         converter = TimereportConverter()
         output = converter.convert(case_name+'.xml', creation_date="2018-04-01")
@@ -25,5 +20,8 @@ class TD2TLUTest(unittest.TestCase):
 
     def test_1_employee_1_registration(self):
         self.convert_and_compare('1_anstalld_1_registrering_franvaro')
+        
+    def test_1_employee_2_registration(self):
+        self.convert_and_compare('1_anstalld_2_registrering_franvaro')
         
 
