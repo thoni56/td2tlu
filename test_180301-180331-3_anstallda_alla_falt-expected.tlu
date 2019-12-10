@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><SalaryData ProgramName='Visma Tid' Version='2.4  2011-04-04' ExportVersion='1.2' Created='2018-03-09' Type='SalaryData' Language='Swedish' CompanyName='Övningsbolaget AB' OrgNo='555555-5555' Imported='0' BookDistributionProject='1' BookDistributionResultUnit='1'>
+<TimeCodes>
+<TimeCode Code='010' TimeCodeName='Normal' AbsenceType='0' RegularworkingTime='1' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='015' TimeCodeName='Mertid - betald' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='020' TimeCodeName='Övertid 1 - betald' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='021' TimeCodeName='Övertid 2 - betald' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='022' TimeCodeName='Övertid 3 - betald' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='025' TimeCodeName='Övertid 1 - komptid' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='1.00' Active='1'/>
+<TimeCode Code='026' TimeCodeName='Övertid 2 - komptid' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='1.50' Active='1'/>
+<TimeCode Code='027' TimeCodeName='Övertid 3 - komptid' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='2.00' Active='1'/>
+<TimeCode Code='030' TimeCodeName='Restid - inom ordinarie arbetstid' AbsenceType='0' RegularworkingTime='1' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='031' TimeCodeName='Restid - utanför ordinarie arbetstid' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='032' TimeCodeName='Restid - helg' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='040' TimeCodeName='Semester' AbsenceType='1' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='050' TimeCodeName='Sjuk' AbsenceType='1' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='060' TimeCodeName='Vård av barn' AbsenceType='1' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='070' TimeCodeName='Föräldraledig' AbsenceType='1' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='075' TimeCodeName='Pappaledig (10 dgr)' AbsenceType='1' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='080' TimeCodeName='Kompledig' AbsenceType='1' RegularworkingTime='0' ConversionFactorTime='-1.00' Active='1'/>
+<TimeCode Code='090' TimeCodeName='Tjänstledig' AbsenceType='1' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>
+<TimeCode Code='Flex' TimeCodeName='Flex' AbsenceType='991' RegularworkingTime='0' ConversionFactorTime='1.00' Active='1'/>
+<TimeCode Code='KompErs' TimeCodeName='Komptid i pengar (uttag)' AbsenceType='992' RegularworkingTime='0' ConversionFactorTime='1.00' Active='1'/>
+</TimeCodes>
+<Projects>
+<Project Code='002IT' Description='Intern tid'/>
+<Project Code='0016' Description='Support'/>
+<Project Code='0019' Description='Byte av server'/>
+</Projects>
+<ResultUnits>
+<ResultUnit Code='Nord' Description='Kontor Nord'/>
+<ResultUnit Code='Syd' Description='Kontor Syd'/>
+</ResultUnits>
+<SalaryDataEmployee FromDate='2018-03-01' ToDate='2018-03-31'>
+<Employee EmploymentNo='106' Signature='KL' FirstName='Kalle' Name='Lindström' PersonalNo='198806115534' HourlyWage='1' EmplCategory='1' FromDate='2018-03-01' ToDate='2018-03-31'>
+<NormalWorkingTimes>
+<NormalWorkingTime DateOfReport='2018-03-01' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-02' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-03' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-04' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-05' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-06' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-07' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-08' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-09' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-10' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-11' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-12' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-13' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-14' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-15' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-16' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-17' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-18' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-19' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-20' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-21' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-22' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-23' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-24' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-25' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-26' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-27' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-28' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-29' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-30' NormalWorkingTimeHours='' FlexTimeHours=''/>
+<NormalWorkingTime DateOfReport='2018-03-31' NormalWorkingTimeHours='' FlexTimeHours=''/>
+</NormalWorkingTimes>
+<Times>
+<Time DateOfReport='2018-03-02' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-14' TimeCode='010' SumOfHours='6.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-15' TimeCode='010' SumOfHours='5.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-16' TimeCode='010' SumOfHours='7.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-19' TimeCode='010' SumOfHours='2.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-22' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-23' TimeCode='010' SumOfHours='7.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+</Times>
+<TimeAdjustments>
+</TimeAdjustments>
+<TimeBalances>
+<TimeBalance TimeCode='##SumComp##' PeriodRegHours='' ConvPeriodRegHours='0.00' AccRegHours='' ConvAccRegHours='0.00'/>
+</TimeBalances>
+<BookDistributionProjects>
+<BookDistributionProject ProjectCode='002IT' Distribution='100.000000'/>
+</BookDistributionProjects>
+<BookDistributionResultUnits>
+</BookDistributionResultUnits>
+<RegOutlays>
+</RegOutlays>
+</Employee>
+<Employee EmploymentNo='101' Signature='AO' FirstName='Anders' Name='Oleby' PersonalNo='196504204535' HourlyWage='0' EmplCategory='1' FromDate='2018-03-01' ToDate='2018-03-31'>
+<NormalWorkingTimes>
+<NormalWorkingTime DateOfReport='2018-03-01' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-02' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-03' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-04' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-05' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-06' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-07' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-08' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-09' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-10' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-11' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-12' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-13' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-14' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-15' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-16' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-17' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-18' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-19' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-20' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-21' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-22' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-23' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-24' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-25' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-26' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-27' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-28' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-29' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-30' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-31' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+</NormalWorkingTimes>
+<Times>
+<Time DateOfReport='2018-03-01' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-02' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-03' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-06' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-07' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-08' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-09' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-10' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-13' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-14' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-15' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-16' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-17' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Nord'/>
+<Time DateOfReport='2018-03-20' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-21' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-22' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-23' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-24' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='0016' ResultUnitCode='Syd'/>
+<Time DateOfReport='2018-03-26' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-27' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-28' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-29' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+</Times>
+<TimeAdjustments>
+</TimeAdjustments>
+<TimeBalances>
+<TimeBalance TimeCode='080' PeriodRegHours='' ConvPeriodRegHours='0.0000' AccRegHours='2.00' ConvAccRegHours='-2.0000'/>
+<TimeBalance TimeCode='Flex' PeriodRegHours='0.00' ConvPeriodRegHours='0.0000' AccRegHours='0.00' ConvAccRegHours='0.0000'/>
+<TimeBalance TimeCode='##SumComp##' PeriodRegHours='' ConvPeriodRegHours='0.00' AccRegHours='' ConvAccRegHours='-2.00'/>
+</TimeBalances>
+<BookDistributionProjects>
+<BookDistributionProject ProjectCode='002IT' Distribution='52.380952'/>
+<BookDistributionProject ProjectCode='0016' Distribution='47.619048'/>
+</BookDistributionProjects>
+<BookDistributionResultUnits>
+<BookDistributionResultUnit ResultUnitCode='Nord' Distribution='38.095238'/>
+<BookDistributionResultUnit ResultUnitCode='Syd' Distribution='47.619048'/>
+</BookDistributionResultUnits>
+<RegOutlays>
+</RegOutlays>
+</Employee>
+<Employee EmploymentNo='104' Signature='SS' FirstName='Sven' Name='Svensson' PersonalNo='196505096773' HourlyWage='1' EmplCategory='1' FromDate='2018-03-01' ToDate='2018-03-31'>
+<NormalWorkingTimes>
+<NormalWorkingTime DateOfReport='2018-03-01' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-02' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-03' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-04' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-05' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-06' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-07' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-08' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-09' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-10' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-11' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-12' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-13' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-14' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-15' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-16' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-17' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-18' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-19' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-20' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-21' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-22' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-23' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-24' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-25' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-26' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-27' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-28' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-29' NormalWorkingTimeHours='8.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-30' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+<NormalWorkingTime DateOfReport='2018-03-31' NormalWorkingTimeHours='0.00' FlexTimeHours='0.00'/>
+</NormalWorkingTimes>
+<Times>
+<Time DateOfReport='2018-03-01' TimeCode='050' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-02' TimeCode='050' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-05' TimeCode='050' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-06' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-07' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-08' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-09' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-12' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-13' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-14' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-15' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-16' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-19' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-20' TimeCode='060' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-21' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-22' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-23' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-24' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-25' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-26' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-27' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-28' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+<Time DateOfReport='2018-03-29' TimeCode='010' SumOfHours='8.00' TimeStart='' TimeEnd='' ProjectCode='002IT' ResultUnitCode=''/>
+</Times>
+<TimeAdjustments>
+</TimeAdjustments>
+<TimeBalances>
+<TimeBalance TimeCode='080' PeriodRegHours='' ConvPeriodRegHours='0.0000' AccRegHours='2.00' ConvAccRegHours='-2.0000'/>
+<TimeBalance TimeCode='Flex' PeriodRegHours='0.00' ConvPeriodRegHours='0.0000' AccRegHours='-4.50' ConvAccRegHours='-4.5000'/>
+<TimeBalance TimeCode='##SumComp##' PeriodRegHours='' ConvPeriodRegHours='0.00' AccRegHours='' ConvAccRegHours='-2.00'/>
+</TimeBalances>
+<BookDistributionProjects>
+<BookDistributionProject ProjectCode='002IT' Distribution='100.000000'/>
+</BookDistributionProjects>
+<BookDistributionResultUnits>
+</BookDistributionResultUnits>
+<RegOutlays>
+<RegOutlay DateOfReport='2018-03-01' OutlayCode='010' OutlayCodeName='Logi' OutlayType='010 - Logi' NoOfPrivate='' Unit='St' SumOfPrivate='1100.00' SumOfPrivateTax='' InternNote='' ProjectCode='0019' ResultUnitCode=''/>
+</RegOutlays>
+</Employee>
+</SalaryDataEmployee>
+</SalaryData>

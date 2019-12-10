@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SalaryData>
+  <TimeCodes>
+  </TimeCodes>
+  <SalaryDataEmployee FromDate='2018-03-01' ToDate='2018-03-31'>
+    <Employee EmploymentNo='1' FirstName='Anders' Name='Bodelius' FromDate='2018-03-01' ToDate='2018-03-31'>
+      <NormalWorkingTimes>
+      </NormalWorkingTimes>
+      <Times>
+      </Times>
+      <TimeAdjustments>
+      </TimeAdjustments>
+      <TimeBalances>
+        <TimeBalance TimeCode='##SumComp##' ConvAccRegHours='0.00'/>
+      </TimeBalances>
+      <RegOutlays>
+      </RegOutlays>
+    </Employee>
+  </SalaryDataEmployee>
+</SalaryData>
