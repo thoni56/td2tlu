@@ -84,60 +84,81 @@ class TimereportConverter():
             'FromDate': from_date, 'ToDate': to_date})
         for user in self.user_table:
 
-            time_registrations = filter(lambda r: is_row_for(
-                r, user.id), time_rows)
-            time_registrations = list(time_registrations)
-            absence_registrations = list(
-                filter(is_absence_registration, time_registrations))
+            # We will only handle absense, not other types of time registrations
+            absence_registrations = self.extract_absence_registrations(user, time_rows)
 
-            expense_registrations = filter(lambda r: is_row_for(
-                r, user.id), expense_rows)
-            expense_registrations = list(expense_registrations)
+            expense_registrations = self.extract_expense_registrations(user, expense_rows)
 
             if len(absence_registrations) > 0 or len(expense_registrations):
                 employee = ET.SubElement(salary_data_employee, 'Employee', {
                     'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last,
                     'FromDate': from_date, 'ToDate': to_date})
 
+                # No data for normal working times but node is required
                 ET.SubElement(employee, 'NormalWorkingTimes')
 
-                times = ET.SubElement(employee, 'Times')
-
+                # Absence registrations
+                times = ET.Element('Times')
                 for absence_registration in absence_registrations:
-                    activity_name = absence_registration.find(
-                        'activityname').text
-                    try:
-                        timecode = self.timecode_lookup(activity_name)
-                        time = ET.SubElement(times, 'Time')
-                        time.set('DateOfReport',
-                                 absence_registration.find('date').text)
-                        time.set('TimeCode', timecode)
-                        time_in_fractions = convert_time_to_decimal(
-                            absence_registration.find('reportedtime').text)
-                        time.set('SumOfHours', time_in_fractions)
-                    except:
-                        # Did not find that activity, print a warning
-                        print(
-                            "WARNING! Unknown absence activity - '{}' ignored".format(activity_name), file=sys.stderr)
+                    absence = self.time_from_registration(absence_registration)
+                    times.append(absence)
+                employee.append(times)
 
+                # No time adjustments(?) or balances
                 ET.SubElement(employee, 'TimeAdjustments')
                 ET.SubElement(employee, 'TimeBalances')
 
-                reg_outlays = ET.SubElement(employee, 'RegOutlays')
+                # Expense registrations
+                expenses = ET.Element('RegOutlays')
                 for expense_registration in expense_registrations:
-                    reg_outlay = ET.SubElement(reg_outlays, 'RegOutlay')
-                    reg_outlay.set('DateOfReport',
-                                   expense_registration.find('date').text)
-                    reg_outlay.set('OutlayCodeName', '')
-                    reg_outlay.set('OutlayType', '')
-                    reg_outlay.set('NoOfPrivate', '')
-                    reg_outlay.set('Unit', '')
-                    reg_outlay.set('SumOfPrivate', expense_registration.find('amount').text)
-                    reg_outlay.set('OutlayCodeName', expense_registration.find('description').text)
-
+                    expense = self.expense_from_registration(expense_registration)
+                    expenses.append(expense)
+                employee.append(expenses)
 
         return ET.tostring(salary_data, pretty_print=True,
                            doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
+
+    def expense_from_registration(self, expense_registration):
+        reg_outlay = ET.Element('RegOutlay')
+        reg_outlay.set('DateOfReport',
+                       expense_registration.find('date').text)
+        reg_outlay.set('OutlayCodeName', '')
+        reg_outlay.set('OutlayType', '')
+        reg_outlay.set('NoOfPrivate', '')
+        reg_outlay.set('Unit', '')
+        reg_outlay.set('SumOfPrivate', expense_registration.find('amount').text)
+        reg_outlay.set('OutlayCodeName', expense_registration.find('description').text)
+        return reg_outlay
+
+    def time_from_registration(self, absence_registration):
+        activity_name = absence_registration.find(
+            'activityname').text
+        try:
+            timecode = self.timecode_lookup(activity_name)
+            time = ET.Element('Time')
+            time.set('DateOfReport',
+                     absence_registration.find('date').text)
+            time.set('TimeCode', timecode)
+            time_in_fractions = convert_time_to_decimal(
+                absence_registration.find('reportedtime').text)
+            time.set('SumOfHours', time_in_fractions)
+        except:
+            # Did not find that activity, print a warning
+            print(
+                "WARNING! Unknown absence activity - '{}' ignored".format(activity_name), file=sys.stderr)
+        return time
+
+    def extract_expense_registrations(self, user, expense_rows):
+        expense_registrations = filter(lambda r: is_row_for(
+            r, user.id), expense_rows)
+        expense_registrations = list(expense_registrations)
+        return expense_registrations
+
+    def extract_absence_registrations(self, user, time_rows):
+        time_registrations = self.extract_expense_registrations(user, time_rows)
+        absence_registrations = list(
+            filter(is_absence_registration, time_registrations))
+        return absence_registrations
 
 
 def is_row_for(row, user):
