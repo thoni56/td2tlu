@@ -22,13 +22,13 @@ class TD2TLUTest(unittest.TestCase):
             expected = f.read()
         self.assertEqual(output.strip(), expected.strip())
             
-    def test_converts_a_minimal_input_to_tlu_with_all_required_elements(self):
+    def test_converts_a_minimal_input_to_tlu(self):
         self.convert_and_compare('minimal')
 
     def test_1_employee_1_registration(self):
         self.convert_and_compare('1_anstalld_1_registrering_franvaro')
         
-    def test_1_employee_2_registration(self):
+    def test_1_employee_2_registrations(self):
         self.convert_and_compare('1_anstalld_2_registrering_franvaro')
     
     def test_convert_time_to_decimal_handles_whole_hours(self):
