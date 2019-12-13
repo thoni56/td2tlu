@@ -1,5 +1,11 @@
 #! /usr/bin/env python3
 
+# A converter between the XML format from Timeduty (https://timeduty.com) and
+# the TLU format used by Visma Lön 600. The format for a TLU file is described
+# at https://www.vismaspcs.se/visma-support/visma-lon-600/content/online-help/filformat-tidsredovisningsfil.htm
+#
+# This hack was programmed specifically for Responsive Development Technologies by Thomas Nilefalk
+
 import lxml.etree as ET
 import argparse
 import datetime
@@ -13,14 +19,15 @@ class User():
         self.first = first
         self.last = last
 
+
 class TimereportConverter():
 
     timecode_table = {
-        'Semester':'040',
-        'Sjuk':'050',
-        'VAB':'060',
-        'Föräldraledig':'070',
-        'Tjänstledig':'090',
+        'Semester': '040',
+        'Sjuk': '050',
+        'VAB': '060',
+        'Föräldraledig': '070',
+        'Tjänstledig': '090',
     }
 
     def generate_timecodes(self):
@@ -65,51 +72,78 @@ class TimereportConverter():
         timecodes = self.generate_timecodes()
         salary_data.append(timecodes)
 
-        report = indata.find('timereport')
-        if report is not None:
-            rows = report.findall('reportrow')
+        time_report = indata.find('timereport')
+        time_rows = time_report.findall(
+            'reportrow') if time_report is not None else []
 
-            salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
-                'FromDate': from_date, 'ToDate': to_date})
-            for user in self.user_table:
-                registrations = filter(lambda r: is_row_for(
-                    r, user.id), rows)
-                registrations = list(registrations)
+        expense_report = indata.find('expensereport')
+        expense_rows = expense_report.findall(
+            'reportrow') if expense_report is not None else []
 
-                absence_registrations = list(filter(is_absence_registration, registrations))
+        salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
+            'FromDate': from_date, 'ToDate': to_date})
+        for user in self.user_table:
 
+            time_registrations = filter(lambda r: is_row_for(
+                r, user.id), time_rows)
+            time_registrations = list(time_registrations)
+            absence_registrations = list(
+                filter(is_absence_registration, time_registrations))
 
-                if len(absence_registrations) > 0:
-                    employee = ET.SubElement(salary_data_employee, 'Employee', {
-                        'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last,
-                        'FromDate': from_date, 'ToDate': to_date})
-                    ET.SubElement(employee, 'NormalWorkingTimes')
-                    times = ET.SubElement(employee, 'Times')
-                    for absence_registration in absence_registrations:
-                        activity_name = absence_registration.find('activityname').text
-                        try:
-                            timecode = self.timecode_lookup(activity_name)
-                            time = ET.SubElement(times, 'Time')
-                            time.set('DateOfReport', absence_registration.find('date').text)
-                            time.set('TimeCode', timecode)
-                            time_in_fractions = convert_time_to_decimal(absence_registration.find('reportedtime').text)
-                            time.set('SumOfHours', time_in_fractions)
-                        except:
-                            # Did not find that activity, print a warning
-                            print("WARNING! Unknown absence activity - '{}' ignored".format(activity_name), file=sys.stderr)
+            expense_registrations = filter(lambda r: is_row_for(
+                r, user.id), expense_rows)
+            expense_registrations = list(expense_registrations)
 
-                    ET.SubElement(employee, 'TimeAdjustments')
-                    ET.SubElement(employee, 'TimeBalances')
-                    # TODO Handle expenses
-                    ET.SubElement(employee, 'RegOutlays')
+            if len(absence_registrations) > 0 or len(expense_registrations):
+                employee = ET.SubElement(salary_data_employee, 'Employee', {
+                    'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last,
+                    'FromDate': from_date, 'ToDate': to_date})
+
+                ET.SubElement(employee, 'NormalWorkingTimes')
+
+                times = ET.SubElement(employee, 'Times')
+
+                for absence_registration in absence_registrations:
+                    activity_name = absence_registration.find(
+                        'activityname').text
+                    try:
+                        timecode = self.timecode_lookup(activity_name)
+                        time = ET.SubElement(times, 'Time')
+                        time.set('DateOfReport',
+                                 absence_registration.find('date').text)
+                        time.set('TimeCode', timecode)
+                        time_in_fractions = convert_time_to_decimal(
+                            absence_registration.find('reportedtime').text)
+                        time.set('SumOfHours', time_in_fractions)
+                    except:
+                        # Did not find that activity, print a warning
+                        print(
+                            "WARNING! Unknown absence activity - '{}' ignored".format(activity_name), file=sys.stderr)
+
+                ET.SubElement(employee, 'TimeAdjustments')
+                ET.SubElement(employee, 'TimeBalances')
+
+                reg_outlays = ET.SubElement(employee, 'RegOutlays')
+                for expense_registration in expense_registrations:
+                    reg_outlay = ET.SubElement(reg_outlays, 'RegOutlay')
+                    reg_outlay.set('DateOfReport',
+                                   expense_registration.find('date').text)
+                    reg_outlay.set('OutlayCodeName', '')
+                    reg_outlay.set('OutlayType', '')
+                    reg_outlay.set('NoOfPrivate', '')
+                    reg_outlay.set('Unit', '')
+                    reg_outlay.set('SumOfPrivate', expense_registration.find('amount').text)
+                    reg_outlay.set('OutlayCodeName', expense_registration.find('description').text)
+
 
         return ET.tostring(salary_data, pretty_print=True,
-                    doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
+                           doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
 
 
 def is_row_for(row, user):
     u = row.find('username')
     return u.text == user
+
 
 def is_absence_registration(registration):
     return registration.find('project').text == "Frånvaro"
@@ -121,6 +155,7 @@ def convert_time_to_decimal(time):
     minutes = fields[1] if len(fields) > 1 else 0.0
     value = float(hours) + (float(minutes) / 60.0)
     return "{0:.2f}".format(value).rstrip('0').rstrip('.')
+
 
 if (__name__ == "__main__"):
 
