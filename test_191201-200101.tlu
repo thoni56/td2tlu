@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SalaryData ProgramName="td2tlu.py" Created="2020-01-09" CompanyName="Responsive AB" OrgNo="556565-8472">
+  <TimeCodes>
+    <TimeCode Code="040" TimeCodeName="Semester"/>
+    <TimeCode Code="050" TimeCodeName="Sjuk"/>
+    <TimeCode Code="060" TimeCodeName="VAB"/>
+    <TimeCode Code="070" TimeCodeName="F&#246;r&#228;ldraledig"/>
+    <TimeCode Code="090" TimeCodeName="Tj&#228;nstledig"/>
+  </TimeCodes>
+  <SalaryDataEmployee FromDate="2019-12-01" ToDate="2020-01-01">
+    <Employee EmploymentNo="105" FirstName="Roger" Name="Magnesved" FromDate="2019-12-01" ToDate="2020-01-01">
+      <NormalWorkingTimes/>
+      <Times>
+        <Time DateOfReport="2019-12-18" TimeCode="050" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-19" TimeCode="050" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-23" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-24" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-27" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-30" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-31" TimeCode="040" SumOfHours="8"/>
+      </Times>
+      <TimeAdjustments/>
+      <TimeBalances/>
+      <RegOutlays/>
+    </Employee>
+    <Employee EmploymentNo="107" FirstName="Anders" Name="Bodelius" FromDate="2019-12-01" ToDate="2020-01-01">
+      <NormalWorkingTimes/>
+      <Times>
+        <Time DateOfReport="2019-12-23" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-27" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-30" TimeCode="040" SumOfHours="8"/>
+      </Times>
+      <TimeAdjustments/>
+      <TimeBalances/>
+      <RegOutlays/>
+    </Employee>
+    <Employee EmploymentNo="112" FirstName="Joakim" Name="S&#228;rehag" FromDate="2019-12-01" ToDate="2020-01-01">
+      <NormalWorkingTimes/>
+      <Times>
+        <Time DateOfReport="2019-12-04" TimeCode="070" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-23" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-27" TimeCode="040" SumOfHours="8"/>
+        <Time DateOfReport="2019-12-30" TimeCode="040" SumOfHours="8"/>
+      </Times>
+      <TimeAdjustments/>
+      <TimeBalances/>
+      <RegOutlays/>
+    </Employee>
+  </SalaryDataEmployee>
+</SalaryData>
+
