@@ -30,19 +30,19 @@ class TimereportConverter():
         'Tjänstledig': '090',
     }
 
-    def generate_timecodes(self):
-        timecodes = ET.Element('TimeCodes')
-        for name, code in self.timecode_table.items():
-            ET.SubElement(timecodes, 'TimeCode', {
-                'Code': code, 'TimeCodeName': name})
-        return timecodes
-
     user_table = [
         User('thomas.nilefalk@responsive.se', '102', 'Thomas', 'Nilefalk'),
         User('roger.magnesved@responsive.se', '105', 'Roger', 'Magnesved'),
         User('anders.bodelius@responsive.se', '107', 'Anders', 'Bodelius'),
         User('joakim.sarehag@responsive.se', '112', 'Joakim', 'Särehag'),
     ]
+
+    def generate_timecodes(self):
+        timecodes = ET.Element('TimeCodes')
+        for name, code in self.timecode_table.items():
+            ET.SubElement(timecodes, 'TimeCode', {
+                'Code': code, 'TimeCodeName': name})
+        return timecodes
 
     def timecode_lookup(self, activity_name):
         return self.timecode_table[activity_name]
