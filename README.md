@@ -33,3 +33,11 @@ conversion data is in the source code. If you want to use `td2tlu` you should ch
 
 Obviously this should be factored out to command line options pointing to files
 instead. Merge Requests are welcome.
+
+## Data model
+
+In Timeduty you have clients, projects and activities. The actual hours are
+registered on activities. To select unique activities you must use client/project.
+
+Any additional functionality here (such as an experimental Excel-export) will
+have to refactor this code to require specifying this to collect registrations.
