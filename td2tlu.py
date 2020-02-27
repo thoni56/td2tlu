@@ -25,9 +25,12 @@ class TimereportConverter():
     timecode_table = {
         'Semester': '040',
         'Sjuk': '050',
+        'Sjukdom': '050',
         'VAB': '060',
         'Föräldraledig': '070',
+        'Föräldraledighet': '070',
         'Tjänstledig': '090',
+        'Tjänstledighet': '090',
     }
 
     user_table = [
