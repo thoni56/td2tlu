@@ -89,10 +89,9 @@ class TimereportConverter():
             'FromDate': from_date, 'ToDate': to_date})
         for user in self.user_table:
 
-            # We will only handle absense, not other types of time registrations
-            time_registrations = self.extract_time_registrations(user, time_rows)
+            time_registrations = self.extract_time_registrations_for_user(user, time_rows)
 
-            expense_registrations = self.extract_expense_registrations(user, expense_rows)
+            expense_registrations = self.extract_expense_registrations_for_user(user, expense_rows)
 
             if len(time_registrations) > 0 or len(expense_registrations):
                 employee = ET.SubElement(salary_data_employee, 'Employee', {
@@ -155,14 +154,14 @@ class TimereportConverter():
             time = None
         return time
 
-    def extract_expense_registrations(self, user, expense_rows):
+    def extract_expense_registrations_for_user(self, user, expense_rows):
         expense_registrations = filter(lambda r: is_row_for(
             r, user.id), expense_rows)
         expense_registrations = list(expense_registrations)
         return expense_registrations
 
-    def extract_time_registrations(self, user, time_rows):
-        time_registrations = self.extract_expense_registrations(user, time_rows)
+    def extract_time_registrations_for_user(self, user, time_rows):
+        time_registrations = self.extract_expense_registrations_for_user(user, time_rows)
         registrations = list(
             filter(is_registration_for_project, time_registrations))
         return registrations
