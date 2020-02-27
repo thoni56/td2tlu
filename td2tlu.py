@@ -58,15 +58,28 @@ class TimereportConverter():
         if users is not None:
             self.user_table = users
 
-    def convert(self, file, creation_date=datetime.date.today().strftime("%Y-%m-%d")):
-        if not file:
-            return None
+    def read_data_from_xml(self, file):
         indata = ET.parse(file)
         for setting in indata.iter('setting'):
             if 'FilterDateFrom' in setting.attrib.values():
                 from_date = setting.attrib['value'].split(' ', 1)[0]
             if 'FilterDateTo' in setting.attrib.values():
                 to_date = setting.attrib['value'].split(' ', 1)[0]
+
+        time_report = indata.find('timereport')
+        time_rows = time_report.findall(
+            'reportrow') if time_report is not None else []
+
+        expense_report = indata.find('expensereport')
+        expense_rows = expense_report.findall(
+            'reportrow') if expense_report is not None else []
+        return (from_date, to_date, time_rows, expense_rows)
+
+    def convert_to_tlu(self, file, creation_date=datetime.date.today().strftime("%Y-%m-%d")):
+        if not file:
+            return None
+
+        from_date, to_date, time_rows, expense_rows = self.read_data_from_xml(file)
 
         salary_data = ET.Element('SalaryData')
         salary_data.set('ProgramName', 'td2tlu.py')
@@ -76,17 +89,9 @@ class TimereportConverter():
 
         timecodes = self.generate_timecodes()
         salary_data.append(timecodes)
-
-        time_report = indata.find('timereport')
-        time_rows = time_report.findall(
-            'reportrow') if time_report is not None else []
-
-        expense_report = indata.find('expensereport')
-        expense_rows = expense_report.findall(
-            'reportrow') if expense_report is not None else []
-
         salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
             'FromDate': from_date, 'ToDate': to_date})
+
         for user in self.user_table:
 
             time_registrations = self.extract_time_registrations_for_user(user, time_rows)
@@ -150,7 +155,7 @@ class TimereportConverter():
         except:
             # Did not find that activity, print a warning
             print(
-                "WARNING! Unknown activity - '{}' ignored".format(activity_name), file=sys.stderr)
+                "WARNING! Unknown activity '{}' - ignored".format(activity_name), file=sys.stderr)
             time = None
         return time
 
@@ -163,7 +168,7 @@ class TimereportConverter():
     def extract_time_registrations_for_user(self, user, time_rows):
         time_registrations = self.extract_expense_registrations_for_user(user, time_rows)
         registrations = list(
-            filter(is_registration_for_project, time_registrations))
+            filter(lambda r: is_registration_for_project(r, "Frånvaro"), time_registrations))
         return registrations
 
 
@@ -172,7 +177,7 @@ def is_row_for(row, user):
     return u.text == user
 
 
-def is_registration_for_project(registration):
+def is_registration_for_project(registration, project):
     return registration.find('project').text == "Frånvaro"
 
 
@@ -194,6 +199,6 @@ if (__name__ == "__main__"):
     args = argparser.parse_args()
 
     converter = TimereportConverter()
-    output = converter.convert(args.file)
+    output = converter.convert_to_tlu(args.file)
 
     print(output)
