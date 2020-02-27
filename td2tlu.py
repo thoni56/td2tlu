@@ -6,6 +6,8 @@
 #
 # This hack was programmed specifically for Responsive Development Technologies by Thomas Nilefalk
 
+# TODO You should be able to select which projects, activities and persons to filter times, and expenses for
+
 import lxml.etree as ET
 import argparse
 import datetime
@@ -88,11 +90,11 @@ class TimereportConverter():
         for user in self.user_table:
 
             # We will only handle absense, not other types of time registrations
-            absence_registrations = self.extract_absence_registrations(user, time_rows)
+            time_registrations = self.extract_time_registrations(user, time_rows)
 
             expense_registrations = self.extract_expense_registrations(user, expense_rows)
 
-            if len(absence_registrations) > 0 or len(expense_registrations):
+            if len(time_registrations) > 0 or len(expense_registrations):
                 employee = ET.SubElement(salary_data_employee, 'Employee', {
                     'EmploymentNo': user.number, 'FirstName': user.first, 'Name': user.last,
                     'FromDate': from_date, 'ToDate': to_date})
@@ -100,11 +102,12 @@ class TimereportConverter():
                 # No data for normal working times but node is required
                 ET.SubElement(employee, 'NormalWorkingTimes')
 
-                # Absence registrations
+                # Time registrations
                 times = ET.Element('Times')
-                for absence_registration in absence_registrations:
-                    absence = self.time_from_registration(absence_registration)
-                    times.append(absence)
+                for time_registration in time_registrations:
+                    registration = self.time_from_registration(time_registration)
+                    if registration is not None:
+                        times.append(registration)
                 employee.append(times)
 
                 # No time adjustments(?) or balances
@@ -133,22 +136,23 @@ class TimereportConverter():
         reg_outlay.set('OutlayCodeName', expense_registration.find('description').text)
         return reg_outlay
 
-    def time_from_registration(self, absence_registration):
-        activity_name = absence_registration.find(
+    def time_from_registration(self, time_registration):
+        activity_name = time_registration.find(
             'activityname').text
         try:
             timecode = self.timecode_lookup(activity_name)
             time = ET.Element('Time')
             time.set('DateOfReport',
-                     absence_registration.find('date').text)
+                     time_registration.find('date').text)
             time.set('TimeCode', timecode)
             time_in_fractions = convert_time_to_decimal(
-                absence_registration.find('reportedtime').text)
+                time_registration.find('reportedtime').text)
             time.set('SumOfHours', time_in_fractions)
         except:
             # Did not find that activity, print a warning
             print(
-                "WARNING! Unknown absence activity - '{}' ignored".format(activity_name), file=sys.stderr)
+                "WARNING! Unknown activity - '{}' ignored".format(activity_name), file=sys.stderr)
+            time = None
         return time
 
     def extract_expense_registrations(self, user, expense_rows):
@@ -157,11 +161,11 @@ class TimereportConverter():
         expense_registrations = list(expense_registrations)
         return expense_registrations
 
-    def extract_absence_registrations(self, user, time_rows):
+    def extract_time_registrations(self, user, time_rows):
         time_registrations = self.extract_expense_registrations(user, time_rows)
-        absence_registrations = list(
-            filter(is_absence_registration, time_registrations))
-        return absence_registrations
+        registrations = list(
+            filter(is_registration_for_project, time_registrations))
+        return registrations
 
 
 def is_row_for(row, user):
@@ -169,7 +173,7 @@ def is_row_for(row, user):
     return u.text == user
 
 
-def is_absence_registration(registration):
+def is_registration_for_project(registration):
     return registration.find('project').text == "Frånvaro"
 
 
