@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SalaryData ProgramName="td2tlu.py" Created="2018-04-01" CompanyName="Responsive AB" OrgNo="556565-8472">
+  <TimeCodes>
+    <TimeCode Code="1" TimeCodeName="Sjukdom"/>
+    <TimeCode Code="2" TimeCodeName="VAB"/>
+    <TimeCode Code="3" TimeCodeName="Semester"/>
+  </TimeCodes>
+  <SalaryDataEmployee FromDate="2018-03-01" ToDate="2018-03-31">
+    <Employee EmploymentNo="1" FirstName="Anders" Name="Bodelius" FromDate="2018-03-01" ToDate="2018-03-31">
+      <NormalWorkingTimes/>
+      <Times>
+        <Time DateOfReport="2018-03-10" TimeCode="2" SumOfHours="8"/>
+      </Times>
+      <TimeAdjustments/>
+      <TimeBalances/>
+      <RegOutlays/>
+    </Employee>
+  </SalaryDataEmployee>
+</SalaryData>
+

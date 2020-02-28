@@ -31,6 +31,9 @@ class TD2TLUTest(unittest.TestCase):
     def test_1_employee_2_registrations(self):
         self.convert_and_compare('1_anstalld_2_registrering_franvaro')
     
+    def test_1_employee_2_mixed_registrations(self):
+        self.convert_and_compare('1_anstalld_2_blandade_registreringar')
+        
     def test_convert_time_to_decimal_handles_whole_hours(self):
         self.assertEqual(convert_time_to_decimal('8'), '8')
 

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<timeduty>
+  <meta version='1.8.1' date='2019-11-12 07:54:15' />
+  <settings>
+    <setting name='ReportName' value='Time report - Detailed' />
+    <setting name='CompanyName' value='Responsive' />
+    <setting name='Currency' value='SEK' />
+    <setting name='FilterDateFrom' value='2018-03-01 00:00:00' />
+    <setting name='FilterDateTo' value='2018-03-31 00:00:00' />
+    <setting name='FilterProject' value='Alla projekt' />
+    <setting name='FilterUserName' value='Alla användare' />
+    <setting name='FilterClient' value='Alla klienter' />
+    <setting name='FilterUserGroup' value='Alla resultatenheter' />
+    <setting name='FilterTypeOfTime' value='Alla typer av tid' />
+    <setting name='FilterApprovalStatus' value='Alla' />
+  </settings>
+  <timereport>
+    <reportrow>
+      <date>2018-03-10</date>
+      <username>anders.bodelius@responsive.se</username>
+      <name>Anders Bodelius</name>
+      <department>HQ</department>
+      <resultunit>Responsive HQ</resultunit>
+      <client>Responsive</client>
+      <project>Frånvaro</project>
+      <activityname>VAB</activityname>
+      <reportedtime>8</reportedtime>
+      <cost>0,00</cost>
+      <typeoftime>Lediga timmar</typeoftime>
+      <comment />
+      <userfinished>False</userfinished>
+      <approvaldate />
+      <approvedby />
+    </reportrow>
+    <reportrow>
+      <date>2018-03-11</date>
+      <username>anders.bodelius@responsive.se</username>
+      <name>Anders Bodelius</name>
+      <department>HQ</department>
+      <resultunit>Responsive HQ</resultunit>
+      <client>Cambio</client>
+      <project>Coaching</project>
+      <activityname>Java SDK-teamet</activityname>
+      <reportedtime>8</reportedtime>
+      <cost>0,00</cost>
+      <typeoftime>Lediga timmar</typeoftime>
+      <comment />
+      <userfinished>False</userfinished>
+      <approvaldate />
+      <approvedby />
+    </reportrow>
+  </timereport>
+</timeduty>
