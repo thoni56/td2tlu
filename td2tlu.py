@@ -4,14 +4,13 @@
 # the TLU format used by Visma Lön 600. The format for a TLU file is described
 # at https://www.vismaspcs.se/visma-support/visma-lon-600/content/online-help/filformat-tidsredovisningsfil.htm
 #
-# This hack was programmed specifically for Responsive Development Technologies by Thomas Nilefalk
-
-# TODO You should be able to select which projects, activities and persons to filter times, and expenses for
+# This hack was programmed specifically for handling absence @ Responsive Development Technologies by Thomas Nilefalk
 
 import lxml.etree as ET
 import argparse
 import datetime
 import sys
+import tdreader
 
 
 class User():
@@ -22,7 +21,7 @@ class User():
         self.last = last
 
 
-class TimereportConverter():
+class Timeduty2TluConverter():
 
     timecode_table = {
         'Semester': '040',
@@ -58,28 +57,13 @@ class TimereportConverter():
         if users is not None:
             self.user_table = users
 
-    def read_data_from_xml(self, file):
-        indata = ET.parse(file)
-        for setting in indata.iter('setting'):
-            if 'FilterDateFrom' in setting.attrib.values():
-                from_date = setting.attrib['value'].split(' ', 1)[0]
-            if 'FilterDateTo' in setting.attrib.values():
-                to_date = setting.attrib['value'].split(' ', 1)[0]
-
-        time_report = indata.find('timereport')
-        time_rows = time_report.findall(
-            'reportrow') if time_report is not None else []
-
-        expense_report = indata.find('expensereport')
-        expense_rows = expense_report.findall(
-            'reportrow') if expense_report is not None else []
-        return (from_date, to_date, time_rows, expense_rows)
-
     def convert_to_tlu(self, file, creation_date=datetime.date.today().strftime("%Y-%m-%d")):
         if not file:
             return None
 
-        from_date, to_date, time_rows, expense_rows = self.read_data_from_xml(file)
+        indata = ET.parse(file)
+
+        from_date, to_date, time_rows, expense_rows = tdreader.extract_data_from_xml(indata)
 
         salary_data = ET.Element('SalaryData')
         salary_data.set('ProgramName', 'td2tlu.py')
@@ -94,9 +78,9 @@ class TimereportConverter():
 
         for user in self.user_table:
 
-            time_registrations = self.extract_time_registrations_for_user(user, time_rows)
+            time_registrations = tdreader.filter_registrations_for_user(user, time_rows)
 
-            expense_registrations = self.extract_expense_registrations_for_user(user, expense_rows)
+            expense_registrations = tdreader.filter_registrations_for_user(user, expense_rows)
 
             if len(time_registrations) > 0 or len(expense_registrations):
                 employee = ET.SubElement(salary_data_employee, 'Employee', {
@@ -149,7 +133,7 @@ class TimereportConverter():
             time.set('DateOfReport',
                      time_registration.find('date').text)
             time.set('TimeCode', timecode)
-            time_in_fractions = convert_time_to_decimal(
+            time_in_fractions = tdreader.convert_hour_and_minute_to_fractional_hour(
                 time_registration.find('reportedtime').text)
             time.set('SumOfHours', time_in_fractions)
         except:
@@ -158,35 +142,6 @@ class TimereportConverter():
                 "WARNING! Unknown activity '{}' - ignored".format(activity_name), file=sys.stderr)
             time = None
         return time
-
-    def extract_expense_registrations_for_user(self, user, expense_rows):
-        expense_registrations = filter(lambda r: is_row_for(
-            r, user.id), expense_rows)
-        expense_registrations = list(expense_registrations)
-        return expense_registrations
-
-    def extract_time_registrations_for_user(self, user, time_rows):
-        time_registrations = self.extract_expense_registrations_for_user(user, time_rows)
-        registrations = list(
-            filter(lambda r: is_registration_for_project(r, "Frånvaro"), time_registrations))
-        return registrations
-
-
-def is_row_for(row, user):
-    u = row.find('username')
-    return u.text == user
-
-
-def is_registration_for_project(registration, project):
-    return registration.find('project').text == "Frånvaro"
-
-
-def convert_time_to_decimal(time):
-    fields = time.split(":")
-    hours = fields[0] if len(fields) > 0 else 0.0
-    minutes = fields[1] if len(fields) > 1 else 0.0
-    value = float(hours) + (float(minutes) / 60.0)
-    return "{0:.2f}".format(value).rstrip('0').rstrip('.')
 
 
 if (__name__ == "__main__"):
@@ -198,7 +153,7 @@ if (__name__ == "__main__"):
 
     args = argparser.parse_args()
 
-    converter = TimereportConverter()
+    converter = Timeduty2TluConverter()
     output = converter.convert_to_tlu(args.file)
 
     print(output)
