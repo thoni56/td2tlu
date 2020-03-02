@@ -26,14 +26,27 @@ def extract_data_from_xml(indata):
 
 def filter_registrations_for_user(user, rows):
     registrations = filter(lambda r: is_row_for_user(
-        r, user.id), rows)
+        r, user), rows)
+    return list(registrations)
+
+def filter_registrations_for_client(client, rows):
+    registrations = filter(lambda r: is_row_for_client(
+        r, client), rows)
+    return list(registrations)
+
+def filter_registrations_for_project(project, rows):
+    registrations = filter(lambda r: is_row_for_project(
+        r, project), rows)
     return list(registrations)
 
 def is_row_for_user(row, user):
     return row.find('username').text == user
 
-def is_registration_for_project(registration, project):
-    return registration.find('project').text == project
+def is_row_for_client(row, client):
+    return row.find('client').text == client
+
+def is_row_for_project(row, project):
+    return row.find('project').text == project
 
 def convert_hour_and_minute_to_fractional_hour(time):
     fields = time.split(":")
