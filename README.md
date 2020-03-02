@@ -1,10 +1,12 @@
 # TD2TLU
 
 This python program takes an XML-file produced by the timereporting application
-Timeduty.com (in the reporting section) and converts the absence records to
-the TLU format used by Visma Lön.
+Timeduty.com (in the reporting section) and converts it to various other formats.
 
-## Procedure
+Initial use was to convert the absence records to the TLU format used by Visma Lön
+which still 
+
+## Procedure for using td2tlu
 
 Create a report in Timeduty using whatever parameters you want. Often the time
 period is enough, since `td2tlu` will filter out absence records from the data.
