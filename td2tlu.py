@@ -112,36 +112,32 @@ class Timeduty2TluConverter():
         return ET.tostring(salary_data, pretty_print=True,
                            doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
 
-    def expense_from_registration(self, expense_registration):
-        reg_outlay = ET.Element('RegOutlay')
-        reg_outlay.set('DateOfReport',
-                       expense_registration.find('date').text)
-        reg_outlay.set('OutlayCodeName', '')
-        reg_outlay.set('OutlayType', '')
-        reg_outlay.set('NoOfPrivate', '')
-        reg_outlay.set('Unit', '')
-        reg_outlay.set('SumOfPrivate', expense_registration.find('amount').text)
-        reg_outlay.set('OutlayCodeName', expense_registration.find('description').text)
-        return reg_outlay
+    def expense_from_registration(self, registration):
+        expense_element = ET.Element('RegOutlay')
+        expense_element.set('DateOfReport', tdreader.get_date(registration))
+        expense_element.set('OutlayCodeName', '')
+        expense_element.set('OutlayType', '')
+        expense_element.set('NoOfPrivate', '')
+        expense_element.set('Unit', '')
+        expense_element.set('SumOfPrivate', registration.find('amount').text)
+        expense_element.set('OutlayCodeName', registration.find('description').text)
+        return expense_element
 
-    def time_from_registration(self, time_registration):
-        activity_name = time_registration.find(
+    def time_from_registration(self, registration):
+        activity_name = registration.find(
             'activityname').text
         try:
             timecode = self.timecode_lookup(activity_name)
-            time = ET.Element('Time')
-            time.set('DateOfReport',
-                     time_registration.find('date').text)
-            time.set('TimeCode', timecode)
-            time_in_fractions = tdreader.convert_hour_and_minute_to_fractional_hour(
-                time_registration.find('reportedtime').text)
-            time.set('SumOfHours', time_in_fractions)
+            time_element = ET.Element('Time')
+            time_element.set('DateOfReport', tdreader.get_date(registration))
+            time_element.set('TimeCode', timecode)
+            time_element.set('SumOfHours', tdreader.get_time(registration))
         except:
             # Did not find that activity, print a warning
             print(
                 "WARNING! Unknown activity '{}' - ignored".format(activity_name), file=sys.stderr)
-            time = None
-        return time
+            time_element = None
+        return time_element
 
 
 if (__name__ == "__main__"):
