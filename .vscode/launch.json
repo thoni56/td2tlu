@@ -22,6 +22,15 @@
             "module": "td2tlu",
             "console": "integratedTerminal",
             "args": ["test_191201-200101.xml"]
-        }
+        },
+        {
+            "name": "td2cambio ExportReport...",
+            "type": "python",
+            "request": "launch",
+            "module": "td2cambio",
+            "console": "integratedTerminal",
+            "args": ["2020-02", "ExportReport_Cambio-2020-02.xml"]
+        },
+       
     ]
 }
