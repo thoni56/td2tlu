@@ -45,9 +45,13 @@ if __name__ == "__main__":
     sheet.cell(column=2, row=4, value=month_name+" "+str(year))
     sheet.cell(column=2, row=5, value=team)
 
+    # Where to write dates and times?
+    first_row = 8
+    time_column = 2
+
     # Update rows for dates
     date = datetime.datetime(year, month, 1)
-    for row in range(8, 39):
+    for row in range(first_row, first_row+31):
         sheet.cell(column=1, row=row, value=date)
         date = date + datetime.timedelta(days=1)
 
