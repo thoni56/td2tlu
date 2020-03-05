@@ -48,7 +48,7 @@ def is_row_for_client(row, client):
 def is_row_for_project(row, project):
     return row.find('project').text == project
 
-def convert_hour_and_minute_to_fractional_hour(time):
+def convert_hour_and_minute_as_string_to_fractional_hour(time):
     fields = time.split(":")
     hours = fields[0] if len(fields) > 0 else 0.0
     minutes = fields[1] if len(fields) > 1 else 0.0
