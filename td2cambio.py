@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # TBD check that year and month are integers
 
     # Create new file with correct name
-    file_name = "Konsulttidrapport-"+sys.argv[1]+".xlsx"
+    file_name = "Konsulttidrapport-Responsive-"+sys.argv[1]+".xlsx"
     shutil.copyfile("Konsulttidrapport.xlsx", file_name)
 
     # Open workbook
@@ -61,8 +61,10 @@ if __name__ == "__main__":
 
     # TODO check that from_date & to_date matches the month given as argument
 
-    # Get all cambio project activities
-    tdreader.filter_registrations_for_client(time_rows, "Cambio")
+    # Get all cambio project activity time registrations
+    registrations = tdreader.filter_registrations_for_client(time_rows, "Cambio")
+
+    # and hours from the XML-file
     
 
     # Close and exit
