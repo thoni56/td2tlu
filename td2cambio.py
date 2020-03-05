@@ -66,10 +66,12 @@ if __name__ == "__main__":
     # TODO check that from_date & to_date matches the month given as argument
 
     # Get all cambio project activity time registrations
-    registrations = tdreader.filter_registrations_for_client(time_rows, "Cambio")
+    registrations = tdreader.filter_registrations_for_client("Cambio", time_rows)
 
     # and hours from the XML-file
-    
+    for registration in registrations:
+        y, m, d = tdreader.get_date(registration).split('-')
+        sheet.cell(column=time_column, row=first_row+int(d)-1, value=tdreader.get_time(registration))
 
     # Close and exit
     workbook.save(file_name)
