@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<timeduty>
+<meta version='1.8.1' date='2020-03-05 12:52:05' />
+<settings>
+    <setting name='ReportName' value='Time report - Detailed' />
+    <setting name='CompanyName' value='Responsive' />
+    <setting name='Currency' value='SEK' />
+    <setting name='FilterDateFrom' value='2020-02-01 00:00:00' />
+    <setting name='FilterDateTo' value='2020-03-01 00:00:00' />
+    <setting name='FilterProject' value='Alla projekt' />
+    <setting name='FilterUserName' value='Alla användare' />
+    <setting name='FilterClient' value='Cambio' />
+    <setting name='FilterUserGroup' value='Alla resultatenheter' />
+    <setting name='FilterTypeOfTime' value='Alla typer av tid' />
+    <setting name='FilterApprovalStatus' value='Alla' />
+</settings>
+<timereport>
+  <reportrow>
+    <date>2020-02-04</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>2850,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-05</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>2850,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-06</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>5</reportedtime>
+    <cost>4750,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-07</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>4</reportedtime>
+    <cost>3800,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-10</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>6650,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-11</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>6650,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-12</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>7</reportedtime>
+    <cost>6650,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-13</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>2850,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-14</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>5</reportedtime>
+    <cost>4750,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-17</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>6</reportedtime>
+    <cost>5700,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-19</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>3</reportedtime>
+    <cost>2850,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-20</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>6</reportedtime>
+    <cost>5700,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-24</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>4:30</reportedtime>
+    <cost>4275,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-25</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>2:30</reportedtime>
+    <cost>2375,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-26</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>6:30</reportedtime>
+    <cost>6175,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-27</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>6</reportedtime>
+    <cost>5700,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+  <reportrow>
+    <date>2020-02-28</date>
+    <username>thomas.nilefalk@responsive.se</username>
+    <name>Thomas Nilefalk</name>
+    <department>HQ</department>
+    <resultunit>Responsive HQ</resultunit>
+    <client>Cambio</client>
+    <project>Coachning</project>
+    <activityname>Java SDK Teamet (11402-12)</activityname>
+    <reportedtime>4</reportedtime>
+    <cost>3800,00</cost>
+    <typeoftime>Fakturerbara timmar</typeoftime>
+    <comment />
+    <userfinished>False</userfinished>
+    <approvaldate />
+    <approvedby />
+  </reportrow>
+</timereport>
+</timeduty>
