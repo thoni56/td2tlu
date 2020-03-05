@@ -48,6 +48,16 @@ def is_row_for_client(row, client):
 def is_row_for_project(row, project):
     return row.find('project').text == project
 
+def get_date(row):
+    return row.find('date').text
+
+# Most used is as decimal values, so that is the default
+def get_time(row):
+    return convert_hour_and_minute_as_string_to_fractional_hour(row.find('reportedtime').text)
+
+def get_time_as_string(row):
+    return row.find('reportedtime').text
+
 def convert_hour_and_minute_as_string_to_fractional_hour(time):
     fields = time.split(":")
     hours = fields[0] if len(fields) > 0 else 0.0
