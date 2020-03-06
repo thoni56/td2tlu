@@ -49,7 +49,7 @@ if __name__ == "__main__":
     first_row = 8
     time_column = 2
 
-    # Update rows for dates
+    # Update dates for the rows
     date = datetime.datetime(year, month, 1)
     for row in range(first_row, first_row+31):
         sheet.cell(column=1, row=row, value=date)
@@ -71,7 +71,8 @@ if __name__ == "__main__":
     # and hours from the XML-file
     for registration in registrations:
         y, m, d = tdreader.get_date(registration).split('-')
-        sheet.cell(column=time_column, row=first_row+int(d)-1, value=tdreader.get_time(registration))
+        time = float(tdreader.get_time(registration))
+        sheet.cell(column=time_column, row=first_row+int(d)-1, value=time)
 
     # Close and exit
     workbook.save(file_name)
