@@ -43,9 +43,12 @@ class Timeduty2TluConverter():
 
     def generate_timecodes(self):
         timecodes = ET.Element('TimeCodes')
+        last_timecode = ''
         for name, code in self.timecode_table.items():
-            ET.SubElement(timecodes, 'TimeCode', {
-                'Code': code, 'TimeCodeName': name})
+            if not code == last_timecode:
+                ET.SubElement(timecodes, 'TimeCode', {
+                    'Code': code, 'TimeCodeName': name})
+                last_timecode = code
         return timecodes
 
     def timecode_lookup(self, activity_name):
