@@ -153,11 +153,14 @@ if (__name__ == "__main__"):
     argparser = argparse.ArgumentParser(
         description='Convert XML output from Timeduty to TLU format XML.')
     argparser.add_argument(
-        'file', help='name of the XML file from TimeDuty')
+        'inputfile', help='name of the XML file from TimeDuty')
+    argparser.add_argument(
+        'outputfile', help='name of the TLU file to create')
 
     args = argparser.parse_args()
 
     converter = Timeduty2TluConverter()
-    output = converter.convert_to_tlu(args.file)
+    output = converter.convert_to_tlu(args.inputfile)
 
-    print(output)
+    with open(args.outputfile, 'wb') as file:
+        file.write(output)
