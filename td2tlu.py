@@ -63,7 +63,8 @@ class Timeduty2TluConverter():
 
         indata = ET.parse(file)
 
-        from_date, to_date, time_rows, expense_rows = tdreader.extract_data_from_xml(indata)
+        from_date, to_date, time_rows, expense_rows = tdreader.extract_data_from_xml(
+            indata)
 
         salary_data = ET.Element('SalaryData')
         salary_data.set('ProgramName', 'td2tlu.py')
@@ -78,9 +79,11 @@ class Timeduty2TluConverter():
 
         for user in self.user_table:
 
-            time_registrations = tdreader.filter_registrations_for_user(user, time_rows)
+            time_registrations = tdreader.filter_registrations_for_user(
+                user.id, time_rows)
 
-            expense_registrations = tdreader.filter_registrations_for_user(user, expense_rows)
+            expense_registrations = tdreader.filter_registrations_for_user(
+                user.id, expense_rows)
 
             if len(time_registrations) > 0 or len(expense_registrations):
                 employee = ET.SubElement(salary_data_employee, 'Employee', {
@@ -93,7 +96,8 @@ class Timeduty2TluConverter():
                 # Time registrations
                 times = ET.Element('Times')
                 for time_registration in time_registrations:
-                    registration = self.time_from_registration(time_registration)
+                    registration = self.time_from_registration(
+                        time_registration)
                     if registration is not None:
                         times.append(registration)
                 employee.append(times)
@@ -105,7 +109,8 @@ class Timeduty2TluConverter():
                 # Expense registrations
                 expenses = ET.Element('RegOutlays')
                 for expense_registration in expense_registrations:
-                    expense = self.expense_from_registration(expense_registration)
+                    expense = self.expense_from_registration(
+                        expense_registration)
                     expenses.append(expense)
                 employee.append(expenses)
 
@@ -120,7 +125,8 @@ class Timeduty2TluConverter():
         expense_element.set('NoOfPrivate', '')
         expense_element.set('Unit', '')
         expense_element.set('SumOfPrivate', registration.find('amount').text)
-        expense_element.set('OutlayCodeName', registration.find('description').text)
+        expense_element.set(
+            'OutlayCodeName', registration.find('description').text)
         return expense_element
 
     def time_from_registration(self, registration):
