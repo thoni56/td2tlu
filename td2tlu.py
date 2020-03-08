@@ -117,8 +117,7 @@ class Timeduty2TluConverter():
                     expenses.append(expense)
                 employee.append(expenses)
 
-        return ET.tostring(salary_data, pretty_print=True,
-                           doctype='<?xml version="1.0" encoding="ISO-8859-1"?>').decode()
+        return ET.tostring(salary_data, pretty_print=True, encoding="iso-8859-1")
 
     def expense_from_registration(self, registration):
         expense_element = ET.Element('RegOutlay')
