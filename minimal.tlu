@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version='1.0' encoding='iso-8859-1'?>
 <SalaryData ProgramName="td2tlu.py" Created="2018-04-01" CompanyName="Responsive AB" OrgNo="556565-8472">
   <TimeCodes>
     <TimeCode Code="1" TimeCodeName="Sjukdom"/>
@@ -7,4 +7,3 @@
   </TimeCodes>
   <SalaryDataEmployee FromDate="2019-10-01" ToDate="2019-11-01"/>
 </SalaryData>
-

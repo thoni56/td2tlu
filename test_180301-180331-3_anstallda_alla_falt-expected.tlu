@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?><SalaryData ProgramName='Visma Tid' Version='2.4  2011-04-04' ExportVersion='1.2' Created='2018-03-09' Type='SalaryData' Language='Swedish' CompanyName='Övningsbolaget AB' OrgNo='555555-5555' Imported='0' BookDistributionProject='1' BookDistributionResultUnit='1'>
+<?xml version='1.0' encoding='iso-8859-1'?><SalaryData ProgramName='Visma Tid' Version='2.4  2011-04-04' ExportVersion='1.2' Created='2018-03-09' Type='SalaryData' Language='Swedish' CompanyName='Övningsbolaget AB' OrgNo='555555-5555' Imported='0' BookDistributionProject='1' BookDistributionResultUnit='1'>
 <TimeCodes>
 <TimeCode Code='010' TimeCodeName='Normal' AbsenceType='0' RegularworkingTime='1' ConversionFactorTime='' Active='1'/>
 <TimeCode Code='015' TimeCodeName='Mertid - betald' AbsenceType='0' RegularworkingTime='0' ConversionFactorTime='' Active='1'/>

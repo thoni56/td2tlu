@@ -19,7 +19,7 @@ class TD2TLUTest(unittest.TestCase):
             case_name+'.xml', creation_date="2018-04-01")
         output_file = open(case_name+'.output', 'w+')
         print(output, file=output_file)
-        with open(case_name+'.tlu') as f:
+        with open(case_name+'.tlu', 'rb') as f:
             expected = f.read()
         self.assertEqual(output.strip(), expected.strip())
 
