@@ -53,6 +53,20 @@ def get_time(row):
 def get_time_as_string(row):
     return row.find('reportedtime').text
 
+# Get the username (= email) of the registrant
+def get_username(row):
+    return row.find('username').text
+
+# Get the full name of the registrant
+def get_name(row):
+    return row.find('name').text
+
+def get_date(row):
+    return row.find('date').text
+
+def get_activity(row):
+    return row.find('activityname').text
+
 # Internal
 def is_row_for_user(row, user):
     return row.find('username').text == user
