@@ -1,4 +1,4 @@
-#/usr/bin/env python3
+#!/usr/bin/env python3
 
 import sys
 import shutil
@@ -7,6 +7,7 @@ import datetime
 import calendar
 import lxml.etree as ET
 import tdreader
+import re
 
 
 
@@ -18,7 +19,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 3:
         usage()
         exit(1)
-    
+
     # Year and month from argv
     year, month = sys.argv[1].split("-")
     year = int(year)
@@ -65,10 +66,22 @@ if __name__ == "__main__":
 
     # TODO check that from_date & to_date matches the month given as argument
 
+
     # Get all cambio project activity time registrations
     registrations = tdreader.filter_registrations_for_client("Cambio", time_rows)
 
-    # and hours from the XML-file
+    # TODO we should probably check that there is only one user in the registrations
+    # or possibly generate one report per person
+    name = tdreader.get_name(registrations[0])
+    sheet.cell(column=2, row=2, value=name)     # Write name in name cell
+
+    # TODO we should probably ensure that there is only one project number
+    # or place hours for different project numbers in different columns
+    activity_name = tdreader.get_activity(registrations[0])
+    activity_number = re.sub(r'.*\((.*)\).*', r'\1', activity_name)
+    sheet.cell(column=2, row=7, value=activity_number)
+
+    # Get hours from the XML-file and input in corresponding cells
     for registration in registrations:
         y, m, d = tdreader.get_date(registration).split('-')
         time = float(tdreader.get_time(registration))
