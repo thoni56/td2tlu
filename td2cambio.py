@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     # Create new file with correct name
     file_name = "Konsulttidrapport-Responsive-"+sys.argv[1]+".xlsx"
-    shutil.copyfile("Konsulttidrapport.xlsx", file_name)
+    shutil.copyfile("Cambio-mall.xlsx", file_name)
 
     # Open workbook
     workbook = load_workbook(filename = file_name)
