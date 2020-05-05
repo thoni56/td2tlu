@@ -8,6 +8,7 @@ import calendar
 import lxml.etree as ET
 import tdreader
 import re
+import os
 
 
 
@@ -30,7 +31,8 @@ if __name__ == "__main__":
 
     # Create new file with correct name
     file_name = "Konsulttidrapport-Responsive-"+sys.argv[1]+".xlsx"
-    shutil.copyfile("Cambio-mall.xlsx", file_name)
+    dir_of_script = os.path.dirname(os.path.realpath(__file__))
+    shutil.copyfile(os.path.join(dir_of_script, "Cambio-mall.xlsx"), file_name)
 
     # Open workbook
     workbook = load_workbook(filename = file_name)
@@ -60,7 +62,8 @@ if __name__ == "__main__":
     sheet.cell(column=2, row=7, value=projno)
 
     # and hours from the xml-file
-    indata = ET.parse(sys.argv[2])
+    input_file = sys.argv[2]
+    indata = ET.parse(input_file)
 
     from_date, to_date, time_rows, expense_rows = tdreader.extract_data_from_xml(indata)
 
@@ -69,6 +72,9 @@ if __name__ == "__main__":
 
     # Get all cambio project activity time registrations
     registrations = tdreader.filter_registrations_for_client("Cambio", time_rows)
+    if len(registrations) == 0:
+        print("ERROR: No registrations found in '{}'".format(input_file))
+        sys.exit(1)
 
     # TODO we should probably check that there is only one user in the registrations
     # or possibly generate one report per person
