@@ -10,7 +10,8 @@ import tdreader
 import re
 import os
 
-
+def activity_number_from(activity_name):
+    return re.sub(r'.*\((.*)\).*', r'\1', activity_name)
 
 def usage():
     print("Usage:   td2cambio <year>-<month> <xml-file>")
@@ -50,7 +51,7 @@ if __name__ == "__main__":
 
     # Where to write dates and times?
     first_row = 8
-    time_column = 2
+    first_time_column = 2
 
     # Update dates for the rows
     date = datetime.datetime(year, month, 1)
@@ -81,17 +82,21 @@ if __name__ == "__main__":
     name = tdreader.get_name(registrations[0])
     sheet.cell(column=2, row=2, value=name)     # Write name in name cell
 
-    # TODO we should probably ensure that there is only one project number
-    # or place hours for different project numbers in different columns
-    activity_name = tdreader.get_activity(registrations[0])
-    activity_number = re.sub(r'.*\((.*)\).*', r'\1', activity_name)
-    sheet.cell(column=2, row=7, value=activity_number)
+    # Place hours for different project numbers in different columns starting in first
+    next_time_column = first_time_column
+    activity_columns = {}
 
     # Get hours from the XML-file and input in corresponding cells
     for registration in registrations:
+        activity_name = tdreader.get_activity(registration)
+        activity_number = activity_number_from(activity_name)
         y, m, d = tdreader.get_date(registration).split('-')
         time = float(tdreader.get_time(registration))
-        sheet.cell(column=time_column, row=first_row+int(d)-1, value=time)
+        if not activity_number in activity_columns:
+            activity_columns[activity_number] = next_time_column
+            sheet.cell(column=next_time_column, row=7, value=activity_number)
+            next_time_column = next_time_column + 1
+        sheet.cell(column=activity_columns[activity_number], row=first_row+int(d)-1, value=time)
 
     # Close and exit
     workbook.save(file_name)
