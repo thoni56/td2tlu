@@ -39,6 +39,7 @@ class Timeduty2TluConverter():
         User('roger.magnesved@responsive.se', '105', 'Roger', 'Magnesved'),
         User('anders.bodelius@responsive.se', '107', 'Anders', 'Bodelius'),
         User('joakim.sarehag@responsive.se', '112', 'Joakim', 'Särehag'),
+        User('christoffer.tornroos@responsive.se', '117', 'Christoffer', 'Törnroos'),
     ]
 
     def generate_timecodes(self):
@@ -79,6 +80,11 @@ class Timeduty2TluConverter():
         salary_data.append(timecodes)
         salary_data_employee = ET.SubElement(salary_data, 'SalaryDataEmployee', {
             'FromDate': from_date, 'ToDate': to_date})
+
+        unknown_users = tdreader.unknown_users_in(self.user_table, time_rows)
+        if unknown_users:
+            print("Unknown user(s) encountered in input: {}. Update user data.".format(unknown_users))
+            sys.exit(1)
 
         for user in self.user_table:
 

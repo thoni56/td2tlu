@@ -45,6 +45,12 @@ def filter_registrations_for_project(project, rows):
         r, project), rows)
     return list(registrations)
 
+# Filter out unknown users given the table of known ones
+def unknown_users_in(user_table, rows):
+    present_emails = list(set([r.find('username').text for r in rows]))
+    unknown_emails = filter(lambda u: u not in [u.id for u in user_table], present_emails)
+    return list(unknown_emails)
+
 # Get registered time for a registration
 # Most used is as decimal values, so that is the default
 def get_time(row):

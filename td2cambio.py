@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # TBD check that year and month are integers
 
     # Create new file with correct name
-    file_name = "Konsulttidrapport-Responsive-"+sys.argv[1]+".xlsx"
+    file_name = "NEW-"+sys.argv[1]+"-Konsulttidrapport-Responsive.xlsx"
     dir_of_script = os.path.dirname(os.path.realpath(__file__))
     shutil.copyfile(os.path.join(dir_of_script, "Cambio-mall.xlsx"), file_name)
 
