@@ -28,6 +28,13 @@
             "console": "integratedTerminal",
             "args": ["2020-06", "ExportReport_Cambio_multiple_projects.xml"]
         },
-       
+        {
+            "name": "td2dlu tornroos...",
+            "type": "python",
+            "request": "launch",
+            "module": "td2tlu",
+            "console": "integratedTerminal",
+            "args": ["tornroos.xml", "tornroos.tlu"]
+        },       
     ]
 }
