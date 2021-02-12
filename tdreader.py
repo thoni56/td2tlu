@@ -1,15 +1,19 @@
-# Module to read an XML-file exported from Timeduty time reporting system (https://timeduty.com)
-# and return date range and time and expense rows
+# Module to read an XML-file exported from Timeduty time reporting system
+# (https://timeduty.com) and return date range and time and expense rows
 
 import lxml.etree as ET
+from datetime import datetime, timedelta
 
-# API: extract data from an XML as it is returned from x xml parsers "parse" function
+# API: extract data from an XML as it is returned from the xml parsers "parse" function
+#
 # Example usage: tdreader.extract_data_from_xml(lxml.etreee.parse(filename))
 # Returns a tuple consisting of:
 #   from_date : string YYYY-MM-DD
 #   to_date : string YYYY-MM-DD
 #   time_rows : list of XML-nodes which all are time registrations
 #   expense_rows : list of XML-nodes which all are expense registrations
+#
+
 def extract_data_from_xml(indata):
 
     for setting in indata.iter('setting'):
@@ -25,6 +29,11 @@ def extract_data_from_xml(indata):
     expense_report = indata.find('expensereport')
     expense_rows = expense_report.findall(
         'reportrow') if expense_report is not None else []
+
+    # Note: as Timeduty reports the "to date" as *to* the first second of the
+    # first day *after* the reporting period we need to subtract one day from
+    # that date
+    to_date = subtract_one_day_from(to_date)
     return (from_date, to_date, time_rows, expense_rows)
 
 # Filter out registrations for a user (user.id = email as a string)
@@ -89,3 +98,9 @@ def convert_hour_and_minute_as_string_to_fractional_hour(time):
     minutes = fields[1] if len(fields) > 1 else 0.0
     value = float(hours) + (float(minutes) / 60.0)
     return "{0:.2f}".format(value).rstrip('0').rstrip('.')
+
+def subtract_one_day_from(date_as_string):
+    date = datetime.strptime(date_as_string, "%Y-%m-%d")
+    date = date-timedelta(days=1)
+    date_as_string = date.strftime("%Y-%m-%d")
+    return date_as_string
