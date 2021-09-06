@@ -146,11 +146,15 @@ class Timeduty2TluConverter():
             time_element.set('DateOfReport', tdreader.get_date(registration))
             time_element.set('TimeCode', timecode)
             time_element.set('SumOfHours', tdreader.get_time(registration))
-        except:
+        except KeyError:
             # Did not find that activity, print a warning
             print(
                 "WARNING! Unknown activity '{}' - ignored".format(activity_name), file=sys.stderr)
             time_element = None
+        except ValueError:
+            # Probably a conversion error
+            print("ERROR! ValueError in ´time_from_registration()`. Maby you used decimal time values in the export?")
+            sys.exit(1)
         return time_element
 
 
